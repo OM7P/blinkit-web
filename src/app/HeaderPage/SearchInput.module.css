@@ -1,0 +1,37 @@
+.scrollingText {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Adjust based on your icon position */
+    transform: translateY(-50%); /* Center vertically */
+    pointer-events: none; /* Ignore mouse events */
+    overflow: hidden; /* Hide overflowing text */
+    height: 50px; /* Same height as the input */
+  }
+  
+  .text {
+    position: absolute;
+    width: 100%; /* Full width */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease; /* Smooth transition */
+  }
+  
+  /* Show the active text */
+  .active {
+    opacity: 1; /* Fully visible */
+    animation: slide 2s forwards; /* Slide down animation */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateY(100%); /* Start below */
+    }
+    50% {
+      transform: translateY(0); /* Center position */
+      opacity: 1; /* Make it visible */
+    }
+    100% {
+      transform: translateY(-100%); /* Move up */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
