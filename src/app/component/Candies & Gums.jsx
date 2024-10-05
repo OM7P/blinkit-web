@@ -19,69 +19,69 @@ import { FaRupeeSign } from "react-icons/fa";
 function Candies_Gums() {
   const Daily_Base_Data = [
     {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
-      price: "60",
-      weight: "10 gm",
-    },
-    {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
-    },
-    {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
-    },
-    {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
-    },
-    {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
-      price: "54",
-      weight: "6 pieces",
-    },
-    {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
-      price: "131",
-      weight: "200 gm",
-    },
-    {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
+      Product_name: "Happydent Sugar Free Wave Fruit Flavour",
+      image: "/images/81.avif",
       price: "50",
-      weight: "400 gm",
+      weight: "28 g",
+    },
+    {
+      Product_name: "Sour Punk Cola Flavour Stick Candy",
+      image: "/images/82.avif",
+      price: "33",
+      weight: "40 gm",
+    },
+    {
+      Product_name: "Fruittella Strawberry Flavour Chewy Toffee",
+      image: "/images/83.avif",
+      price: "35",
+      weight: "35 gm",
+    },
+    {
+      Product_name: "Kopiko Cappuccino Candy - Family Pack",
+      image: "/images/84.avif",
+      price: "40",
+      weight: "145 gm",
+    },
+    {
+      Product_name: "Wrigley's Doublemint Peppermint Chewing",
+      image: "/images/85.avif",
+      price: "50",
+      weight: "30 gm",
+    },
+    {
+      Product_name: "Sunfeast Fantastik Mini Treats (Homepack)",
+      image: "/images/86.avif",
+      price: "55",
+      weight: "125 gm",
+    },
+    {
+      Product_name: "Parle Kismi Elaichi Toffee/ Candy",
+      image: "/images/87.avif",
+      price: "50",
+      weight: "276 gm",
+    },
+    {
+      Product_name: "Center Fresh Sugar Free Mint Candy",
+      image: "/images/88.avif",
+      price: "100",
+      weight: "35 g",
+    },
+    {
+      Product_name: "Happydent White Spearmint Sugar Free",
+      image: "/images/89.avif",
+      price: "50",
+      weight: "212 gm",
+    },
+    {
+      Product_name: "Chupa Chups Sour Bites Mixed Fruit Candy",
+      image: "/images/90.avif",
+      price: "35",
+      weight: "145 gm",
     },
   ];
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
+        <h1 className="text-[25px] font-semibold py-10">Candies & Gums
         </h1>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -97,13 +97,13 @@ function Candies_Gums() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
+         <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
             <Image
               src={product.image}
               width={150}
               height={100}
               alt={product.Product_name}
-              className="mx-6"
+              className="mx-8"
 
 
             />

@@ -19,64 +19,64 @@ import { FaRupeeSign } from "react-icons/fa";
 function Sancks_Munchies() {
   const Daily_Base_Data = [
     {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Cheetos Cheez Puffs",
+      image: "/images/41.avif",
+      price: "10",
+      weight: "20 gm",
     },
     {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
+      Product_name: "Kettle Studio Potato Chips - Rock Sea Salt &",
+      image: "/images/44.avif",
+      price: "99",
+      weight: "212 gm",
     },
     {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
+      Product_name: "Dobra Thin & Crsipy Tapioca Chips",
+      image: "/images/50.avif",
       price: "60",
-      weight: "10 gm",
+      weight: "60 gm",
     },
     {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
+      Product_name: "Orion Turtle Sour Cream & Onion Corn Chips -",
+      image: "/images/49.avif",
+      price: "245",
+      weight: "3 X 115 g",
+    },
+    {
+      Product_name: "Cheetos Flamin hot Crunchy Puffs",
+      image: "/images/42.avif",
+      price: "254",
+      weight: "116.d g",
     },
     {
       Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
+      image: "/images/43.avif",
+      price: "99",
+      weight: "116 gm",
     },
     {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
+      Product_name: "Kettle Studio Potato Chips - Sharp Jalapeno",
+      image: "/images/45.avif",
+      price: "47",
+      weight: "57 g",
     },
     {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
-      price: "54",
-      weight: "6 pieces",
+      Product_name: "Kettle Studio Potato Chips - Sweet Chilli With",
+      image: "/images/46.avif",
+      price: "99",
+      weight: "45 g",
     },
     {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
-      price: "131",
-      weight: "200 gm",
+      Product_name: "Orion K Snack Kimchi Onion Rings",
+      image: "/images/47.avif",
+      price: "45",
+      weight: "70 g",
     },
     {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
-      price: "50",
-      weight: "400 gm",
+      Product_name: "Orion Turtle Spicy Devil Corn Chips",
+      image: "/images/48.avif",
+      price: "99",
+      weight: "115 g",
     },
   ];
   return (
@@ -97,13 +97,13 @@ function Sancks_Munchies() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
+         <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
             <Image
               src={product.image}
-              width={180}
+              width={150}
               height={100}
               alt={product.Product_name}
-            //   className="py-1"
+              className="mx-8"
 
 
             />

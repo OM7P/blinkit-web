@@ -10,6 +10,8 @@ import Hookah from '../component/Hookah'
 import Mouth_Fresh from '../component/Mouth fresheners'
 import Cold_Drinks from '../component/Cold Drinks & Juices'
 import Candies_Gums from '../component/Candies & Gums'
+import LinkCategories from '../component/Limk_Categories'
+import Footer from '../component/Footer'
 
 function Dashboard() {
   return (
@@ -25,6 +27,8 @@ function Dashboard() {
         <Mouth_Fresh/>
         <Cold_Drinks/>
         <Candies_Gums/>
+        <LinkCategories/>
+        <Footer/>
     </div>
   )
 }

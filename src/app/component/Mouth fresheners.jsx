@@ -19,69 +19,69 @@ import { FaRupeeSign } from "react-icons/fa";
 function Mouth_Fresh() {
   const Daily_Base_Data = [
     {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
-      price: "60",
-      weight: "10 gm",
-    },
-    {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
-    },
-    {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
-    },
-    {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
-    },
-    {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
-      price: "54",
-      weight: "6 pieces",
-    },
-    {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
-      price: "131",
-      weight: "200 gm",
-    },
-    {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
+      Product_name: "Chandan Jeera Goli Digestive Tablets",
+      image: "/images/61.avif",
       price: "50",
-      weight: "400 gm",
+      weight: "100 g",
+    },
+    {
+      Product_name: "Center Fresh Sugar Free Mint Candy",
+      image: "/images/62.avif",
+      price: "35",
+      weight: "100 ml",
+    },
+    {
+      Product_name: "Chandan Star 5 in 1 Mouth Freshener",
+      image: "/images/63.avif",
+      price: "120",
+      weight: "200 ml",
+    },
+    {
+      Product_name: "Impact Sugar Free Mint Candy (Ice Mints)",
+      image: "/images/64.avif",
+      price: "147",
+      weight: "14 gm",
+    },
+    {
+      Product_name: "Chandan Elaichi Saunf Mouth Freshener",
+      image: "/images/65.avif",
+      price: "50",
+      weight: "100 gm",
+    },
+    {
+      Product_name: "Impact Sugar Free Mint Candy (Fresh Mints)",
+      image: "/images/66.avif",
+      price: "147",
+      weight: "14 gm",
+    },
+    {
+      Product_name: "Chandan Mint Saunf Mouth Freshener",
+      image: "/images/67.avif",
+      price: "50",
+      weight: "100 gm",
+    },
+    {
+      Product_name: "paper boat Aam Papad Fruit Bar",
+      image: "/images/68.avif",
+      price: "70",
+      weight: "90g",
+    },
+    {
+      Product_name: "Trident Tropical Twist Gum (Sugar Free)",
+      image: "/images/69.avif",
+      price: "180",
+      weight: "1 pack (32 pieces)",
+    },
+    {
+      Product_name: "Chandan Mitha Amla Candy",
+      image: "/images/70.avif",
+      price: "60",
+      weight: "100 gm",
     },
   ];
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
+        <h1 className="text-[25px] font-semibold py-10">Mouth fresheners
         </h1>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -97,16 +97,14 @@ function Mouth_Fresh() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
-            <Image
-              src={product.image}
-              width={180}
-              height={100}
-              alt={product.Product_name}
-            //   className="py-1"
-
-
-            />
+           <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
+              <Image
+                src={product.image}
+                width={130}
+                height={100}
+                alt={product.Product_name}
+                  className="mx-8"
+              />
             <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
               <CiStopwatch />
               15min

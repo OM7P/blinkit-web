@@ -19,64 +19,64 @@ import { FaRupeeSign } from "react-icons/fa";
 function Rolling_Paper() {
   const Daily_Base_Data = [
     {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Perfect Rolled Cones (Natural) - Bongchie",
+      image: "/images/31.avif",
+      price: "45",
+      weight: "6 pack",
     },
     {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
+      Product_name: "Brown Rolling Paper Cones - Stash Pro",
+      image: "/images/32.avif",
+      price: "90",
+      weight: "6 pieces",
     },
     {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Brown Rolling Paper (King Size) - Stash Pro",
+      image: "/images/33.avif",
+      price: "50",
+      weight: "1 unit (32 pieces)",
     },
     {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
-      price: "60",
-      weight: "10 gm",
+      Product_name: "Ultimate Rolling Paper with Filter Tips &",
+      image: "/images/34.avif",
+      price: "90",
+      weight: "1 unit (32 pieces)",
     },
     {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
+      Product_name: "Colour Roach - Stash Pro",
+      image: "/images/35.avif",
+      price: "50",
+      weight: "32 sheets",
     },
     {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
+      Product_name: "Ultimate Rolling Paper with Filter Tips &",
+      image: "/images/36.avif",
+      price: "59",
+      weight: "32 sheets",
     },
     {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
+      Product_name: "Perfect Rolled Cones (White) - Bongchie",
+      image: "/images/37.avif",
+      price: "45",
+      weight: "3 pack",
     },
     {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
+      Product_name: "White Rolling Paper Cones - Stash Pro",
+      image: "/images/38.avif",
       price: "54",
       weight: "6 pieces",
     },
     {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
-      price: "131",
-      weight: "200 gm",
+      Product_name: "Brown Rolling Paper + Roach with Crushing",
+      image: "/images/39.avif",
+      price: "222",
+      weight: "1 pack",
     },
     {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
-      price: "50",
-      weight: "400 gm",
+      Product_name: "Thins Pre-Rolled Rolling Paper By LIT",
+      image: "/images/40.avif",
+      price: "326",
+      weight: "1 pack",
     },
   ];
   return (
@@ -96,16 +96,14 @@ function Rolling_Paper() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
-            <Image
-              src={product.image}
-              width={180}
-              height={100}
-              alt={product.Product_name}
-            //   className="py-1"
-
-
-            />
+           <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
+              <Image
+                src={product.image}
+                width={130}
+                height={100}
+                alt={product.Product_name}
+                  className="mx-8"
+              />
             <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
               <CiStopwatch />
               10min

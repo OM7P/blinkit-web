@@ -19,69 +19,69 @@ import { FaRupeeSign } from "react-icons/fa";
 function Hookah() {
   const Daily_Base_Data = [
     {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Premium Magic Coal By Stash Pro",
+      image: "/images/51.avif",
+      price: "80",
+      weight: "145 g",
     },
     {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
+      Product_name: "Flat Coconut Hookah Coal Cubes by Stash",
+      image: "/images/52.avif",
+      price: "125",
+      weight: "250 g(30 pieces)",
     },
     {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Paan Raas Herbal Hookah Flavor",
+      image: "/images/53.avif",
+      price: "100",
+      weight: "50 g",
     },
     {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
-      price: "60",
-      weight: "10 gm",
+      Product_name: "Pumpkin Hookah / Sheesha by Rhythm",
+      image: "/images/54.avif",
+      price: "500",
+      weight: "50 gm",
     },
     {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
+      Product_name: "Brain Freeze Up Herbal Hookah Flavor",
+      image: "/images/111.avif",
+      price: "100",
+      weight: "20 g",
     },
     {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
+      Product_name: "HLT Hookah (Assorted) by Alayra",
+      image: "/images/56.avif",
+      price: "1065",
+      weight: "i unit",
     },
     {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
+      Product_name: "Hookah Premium Plastic Filters by Rhythm",
+      image: "/images/57.avif",
+      price: "150",
+      weight: "1 pack(30 pieces)",
     },
     {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
-      price: "54",
-      weight: "6 pieces",
+      Product_name: "Kiwi Herbal Hookah Flavor (Tobacco Free)",
+      image: "/images/58.avif",
+      price: "100",
+      weight: "60 g",
     },
     {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
+      Product_name: "Watermelon Herbal Hookah Flavor",
+      image: "/images/59.avif",
       price: "131",
       weight: "200 gm",
     },
     {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
-      price: "50",
+      Product_name: "Bombay Paan Masala Herbal Hookah Flavor",
+      image: "/images/480930a.avif",
+      price: "500",
       weight: "400 gm",
     },
   ];
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
+        <h1 className="text-[25px] font-semibold py-10">Hookah
         </h1>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -97,16 +97,14 @@ function Hookah() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
-            <Image
-              src={product.image}
-              width={180}
-              height={100}
-              alt={product.Product_name}
-            //   className="py-1"
-
-
-            />
+          <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
+              <Image
+                src={product.image}
+                width={130}
+                height={100}
+                alt={product.Product_name}
+                  className="mx-8"
+              />
             <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
               <CiStopwatch />
               14min
