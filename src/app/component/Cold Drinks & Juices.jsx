@@ -19,69 +19,69 @@ import { FaRupeeSign } from "react-icons/fa";
 function Cold_Drinks() {
   const Daily_Base_Data = [
     {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Bisleri Packaged Water",
+      image: "/images/71.avif",
+      price: "78",
+      weight: "5 L",
     },
     {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
+      Product_name: "Thums Up Soft Drink (750 ml)",
+      image: "/images/72.avif",
+      price: "45",
+      weight: "750 ml",
     },
     {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
+      Product_name: "Coca-Cola Diet Coke Soft Drink - Pack of 6",
+      image: "/images/73.avif",
+      price: "234",
+      weight: "6 X 300 ml",
     },
     {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
-      price: "60",
-      weight: "10 gm",
+      Product_name: "Red Bull Energy Drink (4 x 250 ml)",
+      image: "/images/74.avif",
+      price: "449",
+      weight: "4 X 250 ml",
     },
     {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
+      Product_name: "Amul Probiotic Tadka Salted Buttermilk",
+      image: "/images/75.avif",
+      price: "10",
+      weight: "170 ml",
     },
     {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
+      Product_name: "Bisleri Packaged Water (1 l)",
+      image: "/images/76.avif",
+      price: "20",
+      weight: "1 L",
     },
     {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
+      Product_name: "Sprite Lime Flavored Soft Drink 750 ml",
+      image: "/images/77.avif",
+      price: "48",
+      weight: "150 ml",
     },
     {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
-      price: "54",
-      weight: "6 pieces",
+      Product_name: "Thums Up Soft Drink (300 ml)",
+      image: "/images/78.avif",
+      price: "40",
+      weight: "250 ml",
     },
     {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
-      price: "131",
-      weight: "200 gm",
+      Product_name: "Sting Energy Drink 250 ml",
+      image: "/images/79.avif",
+      price: "20",
+      weight: "250 ml",
     },
     {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
-      price: "50",
-      weight: "400 gm",
+      Product_name: "Thums Up Soft Drink (2.25 l)",
+      image: "/images/80.avif",
+      price: "95",
+      weight: "2.25 ml",
     },
   ];
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
+        <h1 className="text-[25px] font-semibold py-10">Cold Drinks & Juices
         </h1>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -97,13 +97,13 @@ function Cold_Drinks() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
+          <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
             <Image
               src={product.image}
-              width={180}
+              width={150}
               height={100}
               alt={product.Product_name}
-            //   className="py-1"
+              className="mx-8"
 
 
             />
