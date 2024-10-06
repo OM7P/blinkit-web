@@ -16,13 +16,13 @@ function Footer() {
           </p>
           <div className="flex justify-end items-center gap-2">
             <p className="text-gray-700 font-semibold">Download App</p>
-            <Image src={"/images/a1.webp"} width={100} height={100} />
-            <Image src={"/images/a2.webp"} width={100} height={100} />
-            <FaFacebook className="w-[30px] h-[30px]" />
-            <AiFillInstagram className="w-[30px] h-[30px]" />
-            <AiFillTwitterCircle className="w-[30px] h-[30px]" />
-            <FaLinkedin className="w-[30px] h-[30px]" />
-            <FaSquareWhatsapp className="w-[30px] h-[30px]" />
+            <Image src={"/images/a1.webp"} width={120} height={100} />
+            <Image src={"/images/a2.webp"} width={120} height={100} />
+            <FaFacebook className="w-[35px] h-[35px]" />
+            <AiFillInstagram className="w-[35px] h-[35px]" />
+            <AiFillTwitterCircle className="w-[35px] h-[35px]" />
+            <FaLinkedin className="w-[35px] h-[35px]" />
+            <FaSquareWhatsapp className="w-[35px] h-[35px]" />
           </div>
         </div>
       </div>

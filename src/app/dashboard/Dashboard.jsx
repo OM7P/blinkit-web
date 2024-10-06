@@ -12,6 +12,7 @@ import Cold_Drinks from '../component/Cold Drinks & Juices'
 import Candies_Gums from '../component/Candies & Gums'
 import LinkCategories from '../component/Limk_Categories'
 import Footer from '../component/Footer'
+// import Demo_Items from '../component/demo_items'
 
 function Dashboard() {
   return (
@@ -28,6 +29,7 @@ function Dashboard() {
         <Cold_Drinks/>
         <Candies_Gums/>
         <LinkCategories/>
+        {/* <Demo_Items/> */}
         <Footer/>
     </div>
   )

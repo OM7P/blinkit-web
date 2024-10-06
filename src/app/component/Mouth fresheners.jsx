@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation,  A11y } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
@@ -84,20 +84,20 @@ function Mouth_Fresh() {
         <h1 className="text-[25px] font-semibold py-10">Mouth fresheners
         </h1>
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={1}
+      modules={[Navigation,  A11y]}
+      spaceBetween={10}
       slidesPerView={6}
       navigation={{
-        nextEl: "#bannerNext",
-        prevEl: "#bannerPrev",
+        nextEl: "#bannerNext4",
+        prevEl: "#bannerPrev4",
       }}
-      pagination={{ clickable: true }}
+      pagination={{ clickable: false }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-           <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
+           <div className=" relative  rounded-xl border-2 w-[180px] h-[260px] shadow-md shadow-slate-900/50	">
               <Image
                 src={product.image}
                 width={130}
@@ -109,11 +109,11 @@ function Mouth_Fresh() {
               <CiStopwatch />
               15min
             </p>
-            <p className="mx-3 text-[15px]">{product.Product_name.slice(0, 20)}....</p>
+            <p className="mx-3 text-[15px]">{product.Product_name.slice(0, 15)}....</p>
             <p className="text-[12px] text-slate-600 py-[10px] mx-3">
               {product.weight}
             </p>
-            <div className="flex justify-around items-center gap-12">
+            <div className="flex justify-around items-center gap-8">
               <p className="flex justify-center items-center"><FaRupeeSign />
               {product.price || "N/A"}</p>
             
@@ -128,15 +128,15 @@ function Mouth_Fresh() {
   
     <div className="md:block hidden">
       <Button
-        id="bannerPrev"
-        className="bannerPrev absolute -left-5 border-ment-color  bg-slate-300 backdrop-blur-md border-[1px] top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
+        id="bannerPrev4"
+        className="bannerPrev4 absolute -left-5 border-ment-color  bg-slate-300 backdrop-blur-md border-[1px] top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
         type="secondary"
       >
         <IoIosArrowBack className="text-black" />
       </Button>
       <Button
-        id="bannerNext"
-        className="bannerNext absolute right-1 border-ment-color bg-slate-300  border-[1px] backdrop-blur-md top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
+        id="bannerNext4"
+        className="bannerNext4 absolute right-5 border-ment-color bg-slate-300  border-[1px] backdrop-blur-md top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
         type="secondary"
       >
         <IoIosArrowForward className="text-white font-bold" />

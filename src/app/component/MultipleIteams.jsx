@@ -25,7 +25,7 @@ function MultipleIteams() {
     { image: "/images/Slice-20.avif" },
   ];
   return (
-    <div className="grid grid-cols-10 px-16">
+    <div className="grid grid-cols-10 px-16 cursor-pointer">
       {Images_Data_List.map((Data_image) => (
         <div className="">
           <Image src={Data_image.image} width={120} height={100} />

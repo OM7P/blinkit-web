@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, A11y } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
@@ -77,50 +77,56 @@ function Daily_base() {
       price: "50",
       weight: "400 gm",
     },
+    {
+      Product_name: "Amul Cheese Cubes",
+      image: "/images/29.avif",
+      price: "131",
+      weight: "200 gm",
+    },
   ];
+
   return (
-    <div className="relative w-[90%] mx-[100px] ">
+    <div className="relative w-[90%] mx-[100px]">
       <h1 className="text-[25px] font-semibold py-10">Dairy, Bread & Eggs</h1>
+
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={1}
-        slidesPerView={6}
+        modules={[Navigation, A11y]}
+        spaceBetween={10} // Adjust space between slides
+        slidesPerView={6} // Number of slides visible
+        // loop={true} // Enable continuous loop mode
         navigation={{
-          nextEl: "#bannerNext",
-          prevEl: "#bannerPrev",
+          nextEl: "#bannerNext11",
+          prevEl: "#bannerPrev11",
         }}
-        pagination={{ clickable: true }}
+        pagination={{ clickable: false }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
         {Daily_Base_Data.map((product, index) => (
           <SwiperSlide key={index}>
-            <div className=" relative bottom-[1px]   rounded-xl border-2 w-[200px] h-[280px] shadow-md shadow-slate-900/50	">
+            <div className="relative  rounded-xl border-2 w-[180px] h-[260px]">
               <Image
                 src={product.image}
                 width={130}
-                height={100}
+                height={90}
                 alt={product.Product_name}
-                  className="mx-8"
+                className="mx-8"
               />
               <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
                 <CiStopwatch />
                 11min
               </p>
               <p className="mx-3 text-[15px]">
-                {product.Product_name.slice(0, 20)}....
+                {product.Product_name.slice(0, 15)}....
               </p>
               <p className="text-[12px] text-slate-600 py-[10px] mx-3">
                 {product.weight}
               </p>
-              <div className="flex justify-around items-center gap-12">
+              <div className="flex justify-around items-center gap-8">
                 <p className="flex justify-center items-center">
                   <FaRupeeSign />
                   {product.price || "N/A"}
                 </p>
-
-                {/* <Button className="border-green-600 bg-green-600 text-white">ADD</Button>
-                 */}
                 <AddButton />
               </div>
             </div>
@@ -128,17 +134,18 @@ function Daily_base() {
         ))}
       </Swiper>
 
+      {/* Navigation Buttons */}
       <div className="md:block hidden">
         <Button
-          id="bannerPrev"
-          className="bannerPrev absolute -left-9 border-ment-color bg-[#00251F33] backdrop-blur-md border-[1px] top-[60%] translate-y-[-50%] h-[150px] px-3 z-20 cursor-pointer !text-xl"
+          id="bannerPrev11"
+          className="bannerPrev11 absolute -left-5 border-ment-color  bg-slate-300 backdrop-blur-md border-[1px] top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
           type="secondary"
         >
-          <IoIosArrowBack className="text-white" />
+          <IoIosArrowBack className="text-black" />
         </Button>
         <Button
-          id="bannerNext"
-          className="bannerNext absolute right-1 border-ment-color bg-[#00251F33] border-[1px] backdrop-blur-md top-[60%] translate-y-[-50%] h-[150px] px-3 z-20 cursor-pointer !text-xl"
+          id="bannerNext11"
+          className="bannerNext11 absolute right-5 border-ment-color bg-slate-300  border-[1px] backdrop-blur-md top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
           type="secondary"
         >
           <IoIosArrowForward className="text-white font-bold" />
