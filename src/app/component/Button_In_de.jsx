@@ -50,7 +50,7 @@ function AddButton() {
         </div>
       ) : (
         <Button
-          className=" border-green-700  rounded-sm border-2 hover:bg-green-50 text-green-800 bg-green-50 w-[80px]"
+          className=" border-green-700  rounded-lg border-[1px] hover:bg-green-50 text-green-800 bg-green-50 w-[80px]"
           onClick={handleAddClick}
         >
           ADD

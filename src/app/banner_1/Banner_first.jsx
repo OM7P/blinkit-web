@@ -27,8 +27,8 @@ function Banner_first() {
         spaceBetween={50}
         slidesPerView={1}
         navigation={{
-          nextEl: "#bannerNext",
-          prevEl: "#bannerPrev",
+          nextEl: "#bannerNext22",
+          prevEl: "#bannerPrev22",
         }}
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
@@ -52,15 +52,15 @@ function Banner_first() {
       {/* Custom navigation buttons */}
       <div className="md:block hidden">
         <Button
-          id="bannerPrev"
-          className="bannerPrev absolute left-20 border-ment-color bg-[#00251F33] backdrop-blur-md border-[1px] top-[50%] translate-y-[-50%] h-[150px] px-3 z-20 cursor-pointer !text-xl"
+          id="bannerPrev22"
+          className="bannerPrev22 absolute left-20 border-ment-color bg-[#00251F33] backdrop-blur-md border-[1px] top-[50%] translate-y-[-50%] h-[150px] px-3 z-20 cursor-pointer !text-xl"
           type="secondary"
         >
           <IoIosArrowBack className="text-white" />
         </Button>
         <Button
-          id="bannerNext"
-          className="bannerNext absolute right-20 border-ment-color bg-[#00251F33] border-[1px] backdrop-blur-md top-[50%] translate-y-[-50%] h-[150px] px-3 z-20 cursor-pointer !text-xl"
+          id="bannerNext22"
+          className="bannerNext22  absolute right-20 border-ment-color bg-[#00251F33] border-[1px] backdrop-blur-md top-[50%] translate-y-[-50%] h-[150px] px-3 z-20 cursor-pointer !text-xl"
           type="secondary"
         >
           <IoIosArrowForward className="text-white font-bold" />
