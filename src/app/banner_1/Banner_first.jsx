@@ -21,7 +21,7 @@ function Banner_first() {
   ];
 
   return (
-    <div className="relative ">
+    <div className="relative top-[1px]">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}

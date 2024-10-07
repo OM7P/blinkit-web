@@ -97,7 +97,7 @@ function Cold_Drinks() {
     >
       {Daily_Base_Data.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="  rounded-xl border-2 w-[180px] h-[260px] shadow-md shadow-slate-900/50	">
+          <div className="  rounded-xl border-2 w-[180px] h-[260px]  ">
             <Image
               src={product.image}
               width={130}
@@ -115,7 +115,7 @@ function Cold_Drinks() {
             <p className="text-[12px] text-slate-600 py-[10px] mx-3">
               {product.weight}
             </p>
-            <div className="flex justify-around items-center gap-8">
+            <div className="flex justify-around items-center gap-8 text-[13px]">
               <p className="flex justify-center items-center"><FaRupeeSign />
               {product.price || "N/A"}</p>
             

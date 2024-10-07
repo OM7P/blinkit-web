@@ -8,7 +8,7 @@ function Logo() {
         src={"/images/blinkit-icon-small.png"}
         width={150}
         height={10}
-        className="p-2 w-[190px] h-[70px]  rounded-lg "
+        className="p-2 w-[150px] h-[60px]  rounded-lg "
       />
 
       {/* <div className=" absolute bg-black w-[100px] h-full"></div> */}
