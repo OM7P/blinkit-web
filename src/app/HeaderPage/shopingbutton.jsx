@@ -7,11 +7,11 @@ import { FaRupeeSign } from "react-icons/fa";
 import { useStore_Data } from "../store/zustand_data";
 
 function ShopingButton() {
-    const {Count,Item_Price} = useStore_Data();
+    const {Count,Item_Price,} = useStore_Data();
 
     return (
     <div className="">
-      <Button className="text-white  bg-green-700 w-[120px] h-[50px] hover:bg-green-500">
+      <Button className="text-white  bg-green-700 w-[120px] h-[50px] hover:bg-green-700">
         <div className="gap-4 flex justify-around items-center">
           <FaShoppingCart className="w-[20px] h-[20px] " />
           <div className=" text-[19px] font-semibold text-start">

@@ -15,6 +15,8 @@ import Candies_Gums from "../component/Candies & Gums";
 import LinkCategories from "../component/Limk_Categories";
 import Footer from "../component/Footer";
 import Loader from "../component/Loader";
+import Addrress_Card from "../component/Address_Card";
+import AddressCard from "../component/Address_Card";
 
 
 function Dashboard() {
@@ -33,8 +35,9 @@ function Dashboard() {
       <div>
         <Header />
         <Banner_first />
-        {/* <Banner_Second /> */}
-        {/* <MultipleIteams /> */}
+        <Banner_Second />
+        <MultipleIteams />
+        <AddressCard/>
         <Daily_base />
         <Rolling_Paper />
         <Sancks_Munchies />
