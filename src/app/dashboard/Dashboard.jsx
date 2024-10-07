@@ -28,9 +28,9 @@ function Dashboard() {
     }, 1000);
   });
 
-//   if (isLoader) {
-//     return <Loader />;
-//   } else {
+  if (isLoader) {
+    return <Loader />;
+  } else {
     return (
       <div>
         <Header />
@@ -51,6 +51,6 @@ function Dashboard() {
       </div>
     );
   }
-// }
+}
 
 export default Dashboard;
