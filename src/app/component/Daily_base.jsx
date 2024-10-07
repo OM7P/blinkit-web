@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import { React, useEffect } from "react";
 import { CiStopwatch } from "react-icons/ci";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,6 +14,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
 import { FaRupeeSign } from "react-icons/fa";
+import { useStore_Data } from "../store/zustand_data";
+import { CloudFog } from "lucide-react";
 
 function Daily_base() {
   const Daily_Base_Data = [
@@ -85,6 +87,22 @@ function Daily_base() {
     },
   ];
 
+  const {Items_Prices} = useStore_Data();
+
+  
+  useEffect(() => {
+    if (Daily_Base_Data) {
+      // Log all prices of the products
+      Daily_Base_Data.forEach(product => {
+        console.log(product.price);
+      });
+
+      // Call Items_Prices to update your Zustand store
+      Items_Prices(Daily_Base_Data);
+    }
+  }, [Daily_Base_Data, Items_Prices]);  // Ensure dependencies are correct
+
+
   return (
     <div className="relative w-[90%] mx-[100px]">
       <h1 className="text-[25px] font-semibold py-10">Dairy, Bread & Eggs</h1>
@@ -122,9 +140,9 @@ function Daily_base() {
               <p className="text-[12px] text-slate-600 py-[10px] mx-3">
                 {product.weight}
               </p>
-              <div className="flex justify-around items-center gap-8">
+              <div className="flex justify-around items-center gap-8 text-[13px]">
                 <p className="flex justify-center items-center">
-                  <FaRupeeSign />
+                  <FaRupeeSign classNam="" />
                   {product.price || "N/A"}
                 </p>
                 <AddButton />

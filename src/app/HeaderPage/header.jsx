@@ -24,7 +24,7 @@ function Header() {
         <ShopingButton />
       </div>
 
-      {/* <div className="absolute bg-gray-200 h-[1px] w-full top-[80px]"></div> */}
+      <div className="absolute bg-gray-200 h-[1px] w-full top-[80px]"></div>
     </div>
   );
 }

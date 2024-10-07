@@ -26,15 +26,15 @@ function Dashboard() {
     }, 1000);
   });
 
-  if (isLoader) {
-    return <Loader />;
-  } else {
+//   if (isLoader) {
+//     return <Loader />;
+//   } else {
     return (
       <div>
         <Header />
         <Banner_first />
-        <Banner_Second />
-        <MultipleIteams />
+        {/* <Banner_Second /> */}
+        {/* <MultipleIteams /> */}
         <Daily_base />
         <Rolling_Paper />
         <Sancks_Munchies />
@@ -48,6 +48,6 @@ function Dashboard() {
       </div>
     );
   }
-}
+// }
 
 export default Dashboard;

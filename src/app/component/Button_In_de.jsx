@@ -1,13 +1,21 @@
 "use click";
 
-import { React, useState } from "react";
+import { React, useState,useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { useStore_Data } from "../store/zustand_data";
 
 function AddButton() {
   // State to track whether the button has been clicked
   const [count, setCount] = useState(0);
   const [isAdded, setIsAdded] = useState(false);
 
+  const {Count_Data} = useStore_Data();
+
+  // Update the count on mount
+  useEffect(() => {
+    Count_Data(count); // Update the count in Zustand
+  }, [Count_Data, count]);
+    
   // Function to handle button click
   const handleAddClick = () => {
     setIsAdded(true);
@@ -40,6 +48,7 @@ function AddButton() {
               -
             </Button>
             <span className="">{count}</span>
+            {/* {Count_Data(1)} */}
             <Button
               className="hover:bg-green-600 bg-green-600 text-white h-[10px] w-[10px]"
               onClick={handleIncrement}
@@ -60,4 +69,4 @@ function AddButton() {
   );
 }
 
-export default AddButton
+export default AddButton;
