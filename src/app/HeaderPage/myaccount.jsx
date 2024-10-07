@@ -4,7 +4,7 @@ import AccountCard from '../component/Account_Card';
 
 
 function MyAccount() {
-  const [isopen,setOpen]=useState(true)
+  const [isopen,setOpen]=useState(false)
 
   const OpenFunction = () => {
     setOpen(true);
