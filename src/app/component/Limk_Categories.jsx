@@ -64,8 +64,8 @@ function LinkCategories() {
         </div>
       </div>
       <div className="-mx-10">
-        <p className=" text-[20px] font-lg -mx-10">Categories</p>
-        <div className="grid grid-cols-3 font-lg gap-5 w-[800px] text-[15px] text-gray-500">
+        <p className=" text-[20px] font-lg -mx-[80px]">Categories</p>
+        <div className="grid grid-cols-3 font-lg gap-5 w-[700px] text-[15px] text-gray-500">
           {categories.map((field, index) => (
             <div key={index} className="">
               <Link href="/">{field}</Link>

@@ -7,7 +7,7 @@ import ShopingButton from "./shopingbutton";
 
 function Header() {
   return (
-    <div className="h-[80px] flex items-center border-b-yellow-300 border-10 cursor-pointer  justify-between px-4">
+    <div className=" h-[80px] flex items-center border-b-yellow-300 border-10 cursor-pointer  justify-between">
       <div className=" flex justify-center items-center gap-3">
         <Logo />
         <div className="w-[1px] bg-gray-200 h-[11vh] "></div>
@@ -19,7 +19,7 @@ function Header() {
         <SearchInput />
       </div>
 
-      <div className="flex items-center  left-[80%] gap-[20px]">
+      <div className="flex items-center mx-6 gap-[15px]">
         <MyAccount />
         <ShopingButton />
       </div>

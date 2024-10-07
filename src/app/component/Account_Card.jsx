@@ -1,30 +1,10 @@
-// components/Modal.js
-import { Input } from "@/components/ui/input";
-import { useEffect, useState } from "react";
-import { useStore_Data } from "../store/zustand_data";
+
 import { Button } from "@/components/ui/button";
-import { FcHome } from "react-icons/fc";
-import { HiOutlinePencil } from "react-icons/hi2";
+
 import Image from "next/image";
 
 export default function AccountCard({ isopen, setOpen }) {
-  const [Changevalue, setChangevalue] = useState("");
-  const { setAddress_data } = useStore_Data();
-
-  const Address_Sendd__zus = () => {
-    // useEffect(() => {
-    setAddress_data(Changevalue);
-    setOpen(false);
-
-    // }, [Changevalue]);
-  };
-
-  console.log("on chnage data pass:", Changevalue);
-
-  const ChangeFunction = (event) => {
-    setChangevalue(event.target.value);
-  };
-
+ 
   const toggleModal = () => {
     setOpen(false);
   };
