@@ -14,71 +14,11 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
 import { FaRupeeSign } from "react-icons/fa";
-
+import OfferCard_by_ten_percent from "../offer_cards/offer_Card_10%_";
+import { Snacks_and_Munchies } from "../json/Product_json";
 
 function Sancks_Munchies() {
-  const Daily_Base_Data = [
-    {
-      Product_name: "Cheetos Cheez Puffs",
-      image: "/images/41.avif",
-      price: "10",
-      weight: "20 gm",
-    },
-    {
-      Product_name: "Kettle Studio Potato Chips - Rock Sea Salt &",
-      image: "/images/44.avif",
-      price: "99",
-      weight: "212 gm",
-    },
-    {
-      Product_name: "Dobra Thin & Crsipy Tapioca Chips",
-      image: "/images/50.avif",
-      price: "60",
-      weight: "60 gm",
-    },
-    {
-      Product_name: "Orion Turtle Sour Cream & Onion Corn Chips -",
-      image: "/images/49.avif",
-      price: "245",
-      weight: "3 X 115 g",
-    },
-    {
-      Product_name: "Cheetos Flamin hot Crunchy Puffs",
-      image: "/images/42.avif",
-      price: "254",
-      weight: "116.d g",
-    },
-    {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/43.avif",
-      price: "99",
-      weight: "116 gm",
-    },
-    {
-      Product_name: "Kettle Studio Potato Chips - Sharp Jalapeno",
-      image: "/images/45.avif",
-      price: "47",
-      weight: "57 g",
-    },
-    {
-      Product_name: "Kettle Studio Potato Chips - Sweet Chilli With",
-      image: "/images/46.avif",
-      price: "99",
-      weight: "45 g",
-    },
-    {
-      Product_name: "Orion K Snack Kimchi Onion Rings",
-      image: "/images/47.avif",
-      price: "45",
-      weight: "70 g",
-    },
-    {
-      Product_name: "Orion Turtle Spicy Devil Corn Chips",
-      image: "/images/48.avif",
-      price: "99",
-      weight: "115 g",
-    },
-  ];
+  
   return (
     <div className="relative w-[90%] mx-[100px] ">
         <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
@@ -95,7 +35,7 @@ function Sancks_Munchies() {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {Daily_Base_Data.map((product, index) => (
+      {Snacks_and_Munchies.map((product, index) => (
         <SwiperSlide key={index}>
          <div className=" relative  rounded-xl border-2 w-[180px] h-[260px]  ">
             <Image
@@ -107,6 +47,7 @@ function Sancks_Munchies() {
 
 
             />
+             {product.offercard || null}
             <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
               <CiStopwatch />
               12min
