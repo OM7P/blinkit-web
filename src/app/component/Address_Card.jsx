@@ -9,7 +9,7 @@ import { HiOutlinePencil } from "react-icons/hi2";
 export default function AddressCard({ isopen, setOpen }) {
   const [Changevalue, setChangevalue] = useState("");
   const { setAddress_data } = useStore_Data();
-  
+
   const Address_Sendd__zus = () => {
     // useEffect(() => {
     setAddress_data(Changevalue);
@@ -38,7 +38,10 @@ export default function AddressCard({ isopen, setOpen }) {
           <div className="p-6 rounded-lg  shadow-lg mt-[100px] ml-[100px] w-[40%] bg-slate-200">
             {/* <h2 className="text-xl font-bold mb-4">Modal Title</h2> */}
             <div>
-              <Button className="ml-[450px] -mt-[15px] bg-red-700" onClick={toggleModal}>
+              <Button
+                className="ml-[450px] -mt-[15px] bg-red-700"
+                onClick={toggleModal}
+              >
                 X
               </Button>
               <p className="mb-4">Change Location</p>
@@ -84,9 +87,9 @@ export default function AddressCard({ isopen, setOpen }) {
               </div>
               <div className="mx-[40px] text-[12px]">
                 <p>
-                  aanand nagar thane (east), room no.1140 sai krupa chawal, Shiv
-                  sena shakha Mulund Railway Station, Siddharth Nagar, Mulund
-                  West, Mumbai
+                  Ganesh nagar delhi (west), flat no.110 ram krupa chawal,mukesh
+                  nagar Mulund Railway Station, Siddharth Nagar, Mulund West,
+                  Mumbai
                 </p>
                 <p className="bg-slate-300 w-[20px] h-[20px] rounded-2xl mx-2 cursor-pointer flex justify-center items-center my-2">
                   <HiOutlinePencil className=" w-[15px] h-[15px]" />

@@ -26,7 +26,7 @@ export default function AccountCard({ isopen, setOpen }) {
             <div className="grid grid-cols-1 justify-start gap-5">
               <span className="text-[20px] font-semibold">
                 My Account
-                <p className="text-[14px]">9967745300</p>
+                <p className="text-[14px]">99XXXX64XX</p>
               </span>
               <span className="text-[15px] font-thin text-gray-500 cursor-pointer">
                 My Orders

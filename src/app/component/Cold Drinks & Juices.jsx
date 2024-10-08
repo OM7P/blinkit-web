@@ -14,71 +14,12 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
 import { FaRupeeSign } from "react-icons/fa";
-
+import OfferCard from "../offer_cards/OfferCard";
+import OfferCard_by_ten_percent from "../offer_cards/offer_Card_10%_";
+import { Cold_Drinks_and_Juices } from "../json/Product_json";
 
 function Cold_Drinks() {
-  const Daily_Base_Data = [
-    {
-      Product_name: "Bisleri Packaged Water",
-      image: "/images/71.avif",
-      price: "78",
-      weight: "5 L",
-    },
-    {
-      Product_name: "Thums Up Soft Drink (750 ml)",
-      image: "/images/72.avif",
-      price: "45",
-      weight: "750 ml",
-    },
-    {
-      Product_name: "Coca-Cola Diet Coke Soft Drink - Pack of 6",
-      image: "/images/73.avif",
-      price: "234",
-      weight: "6 X 300 ml",
-    },
-    {
-      Product_name: "Red Bull Energy Drink (4 x 250 ml)",
-      image: "/images/74.avif",
-      price: "449",
-      weight: "4 X 250 ml",
-    },
-    {
-      Product_name: "Amul Probiotic Tadka Salted Buttermilk",
-      image: "/images/75.avif",
-      price: "10",
-      weight: "170 ml",
-    },
-    {
-      Product_name: "Bisleri Packaged Water (1 l)",
-      image: "/images/76.avif",
-      price: "20",
-      weight: "1 L",
-    },
-    {
-      Product_name: "Sprite Lime Flavored Soft Drink 750 ml",
-      image: "/images/77.avif",
-      price: "48",
-      weight: "150 ml",
-    },
-    {
-      Product_name: "Thums Up Soft Drink (300 ml)",
-      image: "/images/78.avif",
-      price: "40",
-      weight: "250 ml",
-    },
-    {
-      Product_name: "Sting Energy Drink 250 ml",
-      image: "/images/79.avif",
-      price: "20",
-      weight: "250 ml",
-    },
-    {
-      Product_name: "Thums Up Soft Drink (2.25 l)",
-      image: "/images/80.avif",
-      price: "95",
-      weight: "2.25 ml",
-    },
-  ];
+
   return (
     <div className="relative w-[90%] mx-[100px] ">
         <h1 className="text-[25px] font-semibold py-10">Cold Drinks & Juices
@@ -95,7 +36,7 @@ function Cold_Drinks() {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {Daily_Base_Data.map((product, index) => (
+      {Cold_Drinks_and_Juices.map((product, index) => (
         <SwiperSlide key={index}>
           <div className="  rounded-xl border-2 w-[180px] h-[260px]  ">
             <Image
@@ -107,6 +48,7 @@ function Cold_Drinks() {
 
 
             />
+             {product.offercard || null}
             <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
               <CiStopwatch />
               15min
