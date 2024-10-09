@@ -11,7 +11,7 @@ function MyAccount() {
   };
   return (
     <div className="flex justify-center items-center gap-2 ">
-        <div className="text-[18px] font-semibold" onClick={OpenFunction}>
+        <div className="text-[18px]" onClick={OpenFunction}>
             Account
         </div>
         <div >

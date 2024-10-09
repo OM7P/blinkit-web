@@ -11,12 +11,12 @@ function ShopingButton() {
 
   return (
     <div className="">
-      <Button className="text-white  bg-green-700 w-[120px] h-[50px] hover:bg-green-700">
-        <div className="gap-4 flex justify-around items-center">
+      <Button className="text-white  bg-green-700 w-[100px] h-[45px] hover:bg-green-700">
+        <div className="gap-2 flex justify-around items-center">
           <FaShoppingCart className="w-[20px] h-[20px] " />
 
           {Count > 0 ? (
-            <div className=" text-[19px] font-semibold text-start">
+            <div className=" text-[15px] font-semibold text-start">
               <p>{Count} items</p>
               {/* <p>Count_Data({count}) items</p> */}
               <p className="flex justify-center items-center">
@@ -25,7 +25,7 @@ function ShopingButton() {
               </p>
             </div>
           ) : (
-            <div className=" text-[19px] font-semibold text-start">
+            <div className=" text-[15px] font-semibold text-start">
              My card
             </div>
           )}

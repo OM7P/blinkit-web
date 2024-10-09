@@ -15,20 +15,21 @@ import Candies_Gums from "../component/Candies & Gums";
 import LinkCategories from "../component/Limk_Categories";
 import Footer from "../component/Footer";
 import Loader from "../component/Loader";
+import Location_page from "../current_location/Location_page";
 
 
 function Dashboard() {
-  const [isLoader, setLoader] = useState(true);
+  // const [isLoader, setLoader] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 1000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoader(false);
+  //   }, 1000);
+  // });
 
-  if (isLoader) {
-    return <Loader />;
-  } else {
+  // if (isLoader) {
+  //   return <Loader />;
+  // } else {
     return (
       <div>
         <Header />
@@ -46,7 +47,7 @@ function Dashboard() {
         <Footer />
       </div>
     );
-  }
+  // }
 }
 
 export default Dashboard;
