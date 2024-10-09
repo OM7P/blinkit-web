@@ -20,35 +20,36 @@ import OfferCard from "../offer_cards/OfferCard";
 import All_Card_popup from "./All_Card_popup";
 import { Daily_Base_Data } from "../json/Product_json";
 function Daily_base() {
- 
-
-  const {Items_Prices} = useStore_Data();
+  const { Items_Prices } = useStore_Data();
 
   const [isopen, setOpen] = useState(false);
   const OpenFunction = () => {
     setOpen(true);
   };
 
-  
   useEffect(() => {
     if (Daily_Base_Data) {
       // Log all prices of the products
-      Daily_Base_Data.forEach(product => {
+      Daily_Base_Data.forEach((product) => {
         console.log(product.price);
       });
 
       // Call Items_Prices to update your Zustand store
       Items_Prices(Daily_Base_Data);
     }
-  }, [Daily_Base_Data, Items_Prices]);  // Ensure dependencies are correct
+  }, [Daily_Base_Data, Items_Prices]); // Ensure dependencies are correct
 
-  console.log(Daily_Base_Data.Product_name)
+  console.log(Daily_Base_Data.Product_name);
   return (
     <div className="relative w-[90%] mx-[100px] py-10">
       <div className="flex items-center">
-
-      <h1 className=" text-[25px] font-semibold py-5">Dairy, Bread & Eggs</h1>
-      <span className="flex items-end ml-[71%] text-green-800 font-semibold text-[20px] cursor-pointer underline" onClick={OpenFunction}>See all</span>
+        <h1 className=" text-[25px] font-semibold py-5">Dairy, Bread & Eggs</h1>
+        <span
+          className="flex items-end ml-[71%] text-green-800 font-semibold text-[20px] cursor-pointer underline"
+          onClick={OpenFunction}
+        >
+          See all
+        </span>
       </div>
 
       <Swiper
@@ -80,7 +81,7 @@ function Daily_base() {
                 11min
               </p>
               <p className="mx-3 text-[15px] text-black">
-                {product.Product_name.slice(0, 15)}...
+                {product.Product_name.slice(0, 15).replace(/"/g, '\\"')}...
               </p>
               <p className="text-[12px] text-slate-600 py-[10px] mx-3">
                 {product.weight}

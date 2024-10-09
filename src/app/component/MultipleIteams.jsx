@@ -28,7 +28,7 @@ function MultipleIteams() {
     <div className="grid grid-cols-10 px-16 cursor-pointer">
       {Images_Data_List.map((Data_image) => (
         <div key={Data_image.id}>
-          <Image src={Data_image.image} width={120} height={100} />
+          <Image src={Data_image.image} alt="image" width={120} height={100} />
         </div>
       ))}
     </div>
