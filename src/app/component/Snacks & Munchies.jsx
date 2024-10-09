@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CiStopwatch } from "react-icons/ci";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,13 +16,26 @@ import AddButton from "./Button_In_de";
 import { FaRupeeSign } from "react-icons/fa";
 import OfferCard_by_ten_percent from "../offer_cards/offer_Card_10%_";
 import { Snacks_and_Munchies } from "../json/Product_json";
+import ALL_Card_popup from "./All_Card_popup";
 
 function Sancks_Munchies() {
+  const [isopen, setOpen] = useState(false);
+  const OpenFunction = () => {
+    setOpen(true);
+  };
   
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
+        <div className="flex items-center">
+        <h1 className="text-[25px] font-semibold py-10 whitespace-nowrap">Snacks & Munchies
         </h1>
+        <span
+          className="flex items-end ml-[72%] text-green-800 font-semibold text-[20px] cursor-pointer underline"
+          onClick={OpenFunction}
+        >
+          See all
+        </span>
+      </div>
     <Swiper
       modules={[Navigation,  A11y]}
       spaceBetween={10}
@@ -85,6 +98,8 @@ function Sancks_Munchies() {
         <IoIosArrowForward className="text-white font-bold" />
       </Button>
     </div>
+    {isopen && <ALL_Card_popup isopen={isopen} setOpen={setOpen} id={7} />}
+
   </div>
   
   );

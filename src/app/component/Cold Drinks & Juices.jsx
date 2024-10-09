@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CiStopwatch } from "react-icons/ci";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,13 +17,26 @@ import { FaRupeeSign } from "react-icons/fa";
 import OfferCard from "../offer_cards/OfferCard";
 import OfferCard_by_ten_percent from "../offer_cards/offer_Card_10%_";
 import { Cold_Drinks_and_Juices } from "../json/Product_json";
+import ALL_Card_popup from "./All_Card_popup";
 
 function Cold_Drinks() {
+  const [isopen, setOpen] = useState(false);
+  const OpenFunction = () => {
+    setOpen(true);
+  }
 
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Cold Drinks & Juices
-        </h1>
+        <div className="flex items-center">
+          <h1 className="text-[25px] font-semibold py-10 whitespace-nowrap">Cold Drinks & Juices
+            </h1>
+        <span
+          className="flex items-end ml-[71%] text-green-800 font-semibold text-[20px] cursor-pointer underline"
+          onClick={OpenFunction}
+        >
+          See all
+        </span>
+      </div>
     <Swiper
       modules={[Navigation,  A11y]}
       spaceBetween={10}
@@ -86,6 +99,7 @@ function Cold_Drinks() {
         <IoIosArrowForward className="text-white font-bold" />
       </Button>
     </div>
+    {isopen && <ALL_Card_popup isopen={isopen} setOpen={setOpen} id={5} />}
   </div>
   
   );

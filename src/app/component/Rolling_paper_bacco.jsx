@@ -29,7 +29,7 @@ function Rolling_Paper() {
       <div className="flex items-center">
         <h1 className="text-[25px] font-semibold py-10 whitespace-nowrap	 ">Rolling paper & tobacco</h1>
         <span
-          className="flex items-end ml-[70%] text-green-800 font-semibold text-[20px] cursor-pointer"
+          className="flex items-end ml-[68%] text-green-800 font-semibold text-[20px] cursor-pointer underline"
           onClick={OpenFunction}
         >
           See all
@@ -97,7 +97,7 @@ function Rolling_Paper() {
           <IoIosArrowForward className="text-white font-bold" />
         </Button>
       </div>
-      {isopen && <ALL_Card_popup isopen={isopen} setOpen={setOpen} />}
+      {isopen && <ALL_Card_popup isopen={isopen} setOpen={setOpen} id={2} />}
     </div>
   );
 }

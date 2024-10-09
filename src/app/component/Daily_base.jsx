@@ -42,13 +42,13 @@ function Daily_base() {
     }
   }, [Daily_Base_Data, Items_Prices]);  // Ensure dependencies are correct
 
-
+  console.log(Daily_Base_Data.Product_name)
   return (
     <div className="relative w-[90%] mx-[100px] py-10">
       <div className="flex items-center">
 
       <h1 className=" text-[25px] font-semibold py-5">Dairy, Bread & Eggs</h1>
-      <span className="flex items-end ml-[75%] text-green-800 font-semibold text-[20px] cursor-pointer" onClick={OpenFunction}>See all</span>
+      <span className="flex items-end ml-[71%] text-green-800 font-semibold text-[20px] cursor-pointer underline" onClick={OpenFunction}>See all</span>
       </div>
 
       <Swiper
@@ -71,7 +71,7 @@ function Daily_base() {
                 src={product.image}
                 width={130}
                 height={90}
-                alt={product.Product_name}
+                alt="image"
                 className="mx-8"
               />
               {product.offercard || null}
@@ -79,8 +79,8 @@ function Daily_base() {
                 <CiStopwatch />
                 11min
               </p>
-              <p className="mx-3 text-[15px]">
-                {product.Product_name.slice(0, 15)}....
+              <p className="mx-3 text-[15px] text-black">
+                {product.Product_name.slice(0, 15)}...
               </p>
               <p className="text-[12px] text-slate-600 py-[10px] mx-3">
                 {product.weight}
@@ -114,7 +114,7 @@ function Daily_base() {
           <IoIosArrowForward className="text-white font-bold" />
         </Button>
       </div>
-      {isopen && <All_Card_popup isopen={isopen} setOpen={setOpen} />}
+      {isopen && <All_Card_popup isopen={isopen} setOpen={setOpen} id={1} />}
     </div>
   );
 }
