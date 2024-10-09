@@ -16,12 +16,13 @@ import { Button } from "@/components/ui/button";
 function Banner_first() {
   const banner_Images = [
     { image: "/images/Second_Group-33704.webp" },
+    { image: "/images/banner_90.webp" },
     { image: "/images/First_Group-33704.webp" },
     { image: "/images/Screenshot 2024-10-04 182050.png" },
   ];
 
   return (
-    <div className="relative top-[1px]">
+    <div className="relative top-[4px]">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
