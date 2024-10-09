@@ -15,6 +15,7 @@ function Banner_Second() {
     <div className="flex justify-center items-center cursor-pointer">
         {banner_Images.map((data,index)=>
             <Image key={index}
+            alt="image"
            src={data.Image1}
            width={150}
            height={10}

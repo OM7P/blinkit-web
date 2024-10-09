@@ -49,6 +49,7 @@ export default function AccountCard({ isopen, setOpen }) {
                 <Image
                   src={"/images/sample-qr-code-icon-png.webp"}
                   width={200}
+                  alt="image"
                   height={80}
                   className="w-[110px]"
                 />

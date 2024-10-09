@@ -7,6 +7,7 @@ function Logo() {
       <Image
         src={"/images/blinkit-icon-small.png"}
         width={150}
+        alt="image"
         height={10}
         className="p-2 w-[150px] h-[60px]  rounded-lg "
       />
