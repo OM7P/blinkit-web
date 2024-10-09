@@ -123,3 +123,17 @@ body {
 @keyframes l13{ 
   100%{transform: rotate(1turn)}
 }
+
+.bounce {
+  display: inline-block;
+  animation: bounce 1.5s infinite; /* 1.5s duration, infinite loop */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Starting and ending at the same position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up 10px */
+  }
+}

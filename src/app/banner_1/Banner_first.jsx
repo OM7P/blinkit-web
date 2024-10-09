@@ -37,9 +37,9 @@ function Banner_first() {
       >
         {banner_Images.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-center items-center ">
+            <div className="flex justify-center items-center">
               <Image
-                className="w-[80%] cursor-pointer"
+                className="w-[75%] cursor-pointer rounded-x"
                 src={slide.image}
                 alt={`Banner ${index}`}
                 width={11000}

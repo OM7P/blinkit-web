@@ -4,6 +4,7 @@ import MyAddress from "./myaddress";
 import SearchInput from "./searchInput";
 import MyAccount from "./myaccount";
 import ShopingButton from "./shopingbutton";
+import Location_page from "../current_location/Location_page";
 
 function Header() {
   return (
@@ -20,6 +21,7 @@ function Header() {
       </div>
 
       <div className="flex items-center mx-6 gap-[15px]">
+        <Location_page/>
         <MyAccount />
         <ShopingButton />
       </div>
