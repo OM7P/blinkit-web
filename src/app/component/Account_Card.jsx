@@ -1,6 +1,4 @@
-
 import { Button } from "@/components/ui/button";
-
 import Image from "next/image";
 
 export default function AccountCard({ isopen, setOpen }) {
@@ -35,7 +33,7 @@ export default function AccountCard({ isopen, setOpen }) {
                 Saved Address
               </span>
               <span className="text-[15px] font-thin text-gray-500 cursor-pointer">
-                FAQ's
+                FAQ&apos;s
               </span>
               <span className="text-[15px] font-thin text-gray-500 cursor-pointer">
                 Account Privacy

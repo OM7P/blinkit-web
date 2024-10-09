@@ -33,7 +33,7 @@ function SearchInput() {
     }, 4000); // Change text every 4 seconds
 
     return () => clearInterval(interval);
-  }, [isFocused, inputText]);
+  }, [isFocused, inputText, textSequence]);  // Added 'textSequence' as a dependency
 
   const handleInputChange = (e) => {
     setInputText(e.target.value); // Update inputText state
