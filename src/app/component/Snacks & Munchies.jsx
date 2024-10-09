@@ -56,7 +56,7 @@ function Sancks_Munchies() {
               width={130}
               height={100}
               alt={product.Product_name}
-              className="mx-8"
+               className="mx-8 border-none"
 
 
             />
