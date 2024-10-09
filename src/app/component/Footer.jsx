@@ -27,10 +27,10 @@ function Footer() {
         </div>
       </div>
       <div className="text-gray-400 w-[72%] mx-[240px] text-[15px] ">
-        “Blinkit” is owned & managed by "Blink Commerce Private Limited" and is
+        &quot;Blinkit&quot; is owned &amp; managed by &quot;Blink Commerce Private Limited&quot; and is
         not related, linked or interconnected in whatsoever manner or nature, to
-        “GROFFR.COM” which is a real estate services business operated by
-        “Redstone Consultancy Services Private Limited”.
+        &quot;GROFFR.COM&quot; which is a real estate services business operated by
+        &quot;Redstone Consultancy Services Private Limited&quot;.
       </div>
     </div>
   );

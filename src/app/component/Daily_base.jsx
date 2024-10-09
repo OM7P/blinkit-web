@@ -15,10 +15,10 @@ import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
 import { FaRupeeSign } from "react-icons/fa";
 import { useStore_Data } from "../store/zustand_data";
-import { CloudFog } from "lucide-react";
 import OfferCard from "../offer_cards/OfferCard";
 import All_Card_popup from "./All_Card_popup";
 import { Daily_Base_Data } from "../json/Product_json";
+
 function Daily_base() {
   const { Items_Prices } = useStore_Data();
 
@@ -37,7 +37,7 @@ function Daily_base() {
       // Call Items_Prices to update your Zustand store
       Items_Prices(Daily_Base_Data);
     }
-  }, [Daily_Base_Data, Items_Prices]); // Ensure dependencies are correct
+  }, [Items_Prices]); // Removed Daily_Base_Data from the dependency array
 
   console.log(Daily_Base_Data.Product_name);
   return (
