@@ -78,7 +78,7 @@ export default function ALL_Card_popup({ isopen, setOpen, id }) {
                     width={90}
                     height={90}
                     alt={product.Product_name}
-                    className="mx-8"
+                     className="mx-8 border-none"
                   />
                   {product.offercard || null}
                   <p className="absolute top-[100px] mx-3 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">

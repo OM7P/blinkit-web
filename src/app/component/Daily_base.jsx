@@ -73,7 +73,7 @@ function Daily_base() {
                 width={130}
                 height={90}
                 alt="image"
-                className="mx-8"
+                className="mx-8 border-none"
               />
               {product.offercard || null}
               <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">

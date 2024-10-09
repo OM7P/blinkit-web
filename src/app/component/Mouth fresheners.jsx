@@ -55,7 +55,7 @@ function Mouth_Fresh() {
                 width={130}
                 height={100}
                 alt={product.Product_name}
-                className="mx-8"
+                 className="mx-8 border-none"
               />
               {product.offercard || null}
 
