@@ -15,7 +15,7 @@ function ShopingButton() {
         <div className="gap-2 flex justify-around items-center">
           <FaShoppingCart className="w-[20px] h-[20px] " />
 
-          {Count > 0 ? (
+          {Count >= 0 ? (
             <div className=" text-[15px] font-semibold text-start">
               <p>{Count} items</p>
               {/* <p>Count_Data({count}) items</p> */}
