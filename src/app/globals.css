@@ -110,15 +110,19 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
   background: 
-    radial-gradient(farthest-side,#24b936 94%,#0000) top/8px 8px no-repeat,
-    conic-gradient(#0000 30%,#24b936);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    radial-gradient(farthest-side,#02d41a 1%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 1%,#02d41a);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 6px),#000 0);
   animation: l13 1s infinite linear;
   height: 100%;
   width: 5%;
   position: relative;
   left:47%;
   top:340px;
+
+
+
+
 }
 @keyframes l13{ 
   100%{transform: rotate(1turn)}

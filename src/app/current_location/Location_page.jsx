@@ -45,6 +45,7 @@ function Location_page() {
     }
 );
   };
+  console.log(Datavalue)
 
   return (
     <div className="flex justify-center items-center mr-[10px]">
