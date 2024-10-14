@@ -9,7 +9,7 @@ function MyAddress() {
     setOpen(true);
   };
 
-  const {Count,Item_Price,Address_data} = useStore_Data();
+  const {Count,Address_data} = useStore_Data();
 
   return (
     <div className="flex justify-start items-start flex-col my-3">

@@ -8,6 +8,8 @@ export const Daily_Base_Data = [
     image: "/images/21.avif",
     price: "28",
     weight: "500 ml",
+    parent_id:"Daily_base",
+    id:1
   },
   {
     Product_name: "Gokul Full Cream Fresh Milk",
@@ -15,12 +17,15 @@ export const Daily_Base_Data = [
     price: "38",
     weight: "500 ml",
     offercard: <OfferCard />,
+    parent_id:"Daily_base",
+    id:2
   },
   {
     Product_name: "Gokul Satvik Pasteurized Cow Fresh",
     image: "/images/23.avif",
     price: "28",
-    weight: "500 ml",
+    weight: "500 ml",parent_id:"Daily_base",
+    id:3
   },
   {
     Product_name: "Amul Salted Butter",
@@ -28,12 +33,16 @@ export const Daily_Base_Data = [
     price: "60",
     weight: "10 gm",
     offercard: <OfferCard />,
+    parent_id:"Daily_base",
+    id:4
   },
   {
     Product_name: "Amul Masti Curd",
     image: "/images/25.avif",
     price: "23",
     weight: "200 gm",
+    parent_id:"Daily_base",
+    id:5
   },
   {
     Product_name: "Britannia Vitarich Sandwich White Bread",
@@ -41,12 +50,16 @@ export const Daily_Base_Data = [
     price: "65",
     weight: "500 gm",
     offercard: <OfferCard />,
+    parent_id:"Daily_base",
+    id:6
   },
   {
     Product_name: "Mother Dairy Classic Curd",
     image: "/images/27.avif",
     price: "35",
     weight: "400 gm",
+    parent_id:"Daily_base",
+    id:7
   },
   {
     Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
@@ -54,24 +67,32 @@ export const Daily_Base_Data = [
     price: "54",
     weight: "6 pieces",
     offercard: <OfferCard />,
+    parent_id:"Daily_base",
+    id:8
   },
   {
     Product_name: "Amul Cheese Cubes",
     image: "/images/29.avif",
     price: "131",
     weight: "200 gm",
+    parent_id:"Daily_base",
+    id:9
   },
   {
     Product_name: "Modern Sandwich Bread",
     image: "/images/23.avif",
     price: "50",
     weight: "400 gm",
+    parent_id:"Daily_base",
+    id:10
   },
   {
     Product_name: "Amul Cheese Cubes",
     image: "/images/29.avif",
     price: "131",
     weight: "200 gm",
+    parent_id:"Daily_base",
+    id:11
   },
 ];
 

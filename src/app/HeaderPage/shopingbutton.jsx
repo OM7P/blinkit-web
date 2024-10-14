@@ -1,13 +1,23 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React  from "react";
+import React, { useEffect, useState }  from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRupeeSign } from "react-icons/fa";
 import { useStore_Data } from "../store/zustand_data";
+import SidePopProducItem from "../component/SidePopProductItem";
 
 function ShopingButton() {
-  const { Count, Item_Price } = useStore_Data();
+  const { Count_number, Item_Price,Single_Price } = useStore_Data();
+  // console.log(Item_Price)
+  // console.log(Single_Price)
+  // const newstoreValue = Number(Item_Price)+Number(Single_Price)
+  // console.log("multiple value add here :::",newstoreValue )
+  const [isopen, setOpen] = useState(false);
+
+  const OpenFunction = () => {
+    setOpen(true);
+  };
 
   return (
     <div className="">
@@ -15,13 +25,14 @@ function ShopingButton() {
         <div className="gap-2 flex justify-around items-center">
           <FaShoppingCart className="w-[20px] h-[20px] " />
 
-          {Count >= 0 ? (
-            <div className=" text-[15px] font-semibold text-start">
-              <p>{Count} items</p>
+          {Count_number > 0 ? (
+            <div className=" text-[15px] font-semibold text-start"onClick={OpenFunction} >
+              <p>{Count_number} items</p>
               {/* <p>Count_Data({count}) items</p> */}
               <p className="flex justify-center items-center">
                 <FaRupeeSign />
-                {Item_Price * Count}
+                {Single_Price * Count_number}
+
               </p>
             </div>
           ) : (
@@ -30,6 +41,7 @@ function ShopingButton() {
             </div>
           )}
         </div>
+        {isopen && <SidePopProducItem isopen={isopen} setOpen={setOpen} id={1} />}
       </Button>
     </div>
   );

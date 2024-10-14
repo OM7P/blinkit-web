@@ -21,7 +21,7 @@ function Header() {
       </div>
 
       <div className="flex items-center mx-6 gap-[15px]">
-        <Location_page/>
+        {/* <Location_page/> */}
         <MyAccount />
         <ShopingButton />
       </div>

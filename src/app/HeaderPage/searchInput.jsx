@@ -50,7 +50,7 @@ function SearchInput() {
   };
 
   return (
-    <div className="relative right-[10px]">
+    <div className="relative left-[20px]">
       {/* Show animated text only if input is not focused and no user input */}
       {!isFocused && !inputText && (
         <span className="absolute top-0 left-0 h-full pl-10 flex items-center text-move w-[500px] pointer-events-none">
