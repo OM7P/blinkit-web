@@ -102,3 +102,45 @@ body {
   animation: moveText 4s ease-in-out infinite; /* Apply animation to text */
   caret-color: transparent; /* Hide the cursor */
 }
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#02d41a 1%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 1%,#02d41a);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 6px),#000 0);
+  animation: l13 1s infinite linear;
+  height: 100%;
+  width: 5%;
+  position: relative;
+  left:47%;
+  top:340px;
+
+
+
+
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+
+.bounce {
+  display: inline-block;
+  animation: bounce 1.5s infinite; /* 1.5s duration, infinite loop */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Starting and ending at the same position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up 10px */
+  }
+}
+
+
+

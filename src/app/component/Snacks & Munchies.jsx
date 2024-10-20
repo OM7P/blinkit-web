@@ -2,120 +2,74 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CiStopwatch } from "react-icons/ci";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, A11y } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button_In_de from "./Button_In_de";
 import AddButton from "./Button_In_de";
 import { FaRupeeSign } from "react-icons/fa";
-
+import OfferCard_by_ten_percent from "../offer_cards/offer_Card_10%_";
+import { Snacks_and_Munchies } from "../json/Product_json";
+import ALL_Card_popup from "./All_Card_popup";
 
 function Sancks_Munchies() {
-  const Daily_Base_Data = [
-    {
-      Product_name: "Amul Taaza Toned Fresh Milk",
-      image: "/images/21.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Gokul Full Cream Fresh Milk",
-      image: "/images/22.avif",
-      price: "38",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Gokul Satvik Pasteurized Cow Fresh",
-      image: "/images/23.avif",
-      price: "28",
-      weight: "500 ml",
-    },
-    {
-      Product_name: "Amul Salted Butter",
-      image: "/images/24.avif",
-      price: "60",
-      weight: "10 gm",
-    },
-    {
-      Product_name: "Amul Masti Curd",
-      image: "/images/25.avif",
-      price: "23",
-      weight: "200 gm",
-    },
-    {
-      Product_name: "Britannia Vitarich Sandwich White Bread",
-      image: "/images/26.avif",
-      price: "65",
-      weight: "500 gm",
-    },
-    {
-      Product_name: "Mother Dairy Classic Curd",
-      image: "/images/27.avif",
-      price: "35",
-      weight: "400 gm",
-    },
-    {
-      Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
-      image: "/images/28.avif",
-      price: "54",
-      weight: "6 pieces",
-    },
-    {
-      Product_name: "Amul Cheese Cubes",
-      image: "/images/29.avif",
-      price: "131",
-      weight: "200 gm",
-    },
-    {
-      Product_name: "Modern Sandwich Bread",
-      image: "/images/23.avif",
-      price: "50",
-      weight: "400 gm",
-    },
-  ];
+  const [isopen, setOpen] = useState(false);
+  const OpenFunction = () => {
+    setOpen(true);
+  };
+  
   return (
     <div className="relative w-[90%] mx-[100px] ">
-        <h1 className="text-[25px] font-semibold py-10">Snacks & Munchies
+        <div className="flex items-center">
+        <h1 className="text-[25px] font-semibold py-10 whitespace-nowrap">Snacks & Munchies
         </h1>
+        <span
+          className="flex items-end ml-[72%] text-green-800 font-semibold text-[20px] cursor-pointer underline"
+          onClick={OpenFunction}
+        >
+          See all
+        </span>
+      </div>
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={1}
-      slidesPerView={6}
+      modules={[Navigation,  A11y]}
+      spaceBetween={10}
+      slidesPerView={6}s
       navigation={{
-        nextEl: "#bannerNext",
-        prevEl: "#bannerPrev",
+        nextEl: "#bannerNext6",
+        prevEl: "#bannerPrev6",
       }}
-      pagination={{ clickable: true }}
+      pagination={{ clickable: false }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {Daily_Base_Data.map((product, index) => (
+      {Snacks_and_Munchies.map((product, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white border-slate-100  rounded-sm border-2 w-[200px] h-[300px] shadow-lg shadow-slate-900/50	">
+         <div className=" relative  rounded-xl border-2 w-[180px] h-[260px]  ">
             <Image
               src={product.image}
-              width={180}
+              width={130}
               height={100}
               alt={product.Product_name}
-            //   className="py-1"
+               className="mx-8 border-none"
 
 
             />
+             {product.offercard || null}
             <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
               <CiStopwatch />
               12min
             </p>
-            <p className="mx-3 text-[15px]">{product.Product_name.slice(0, 20)}....</p>
+            <p className="mx-3 text-[15px]">{product.Product_name.slice(0, 15)}....</p>
             <p className="text-[12px] text-slate-600 py-[10px] mx-3">
               {product.weight}
             </p>
-            <div className="flex justify-around items-center gap-12">
+            <div className="flex justify-around items-center gap-8 text-[13px]">
               <p className="flex justify-center items-center"><FaRupeeSign />
               {product.price || "N/A"}</p>
             
@@ -130,20 +84,22 @@ function Sancks_Munchies() {
   
     <div className="md:block hidden">
       <Button
-        id="bannerPrev"
-        className="bannerPrev absolute -left-5 border-ment-color  bg-slate-300 backdrop-blur-md border-[1px] top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
+        id="bannerPrev6"
+        className="bannerPrev6 absolute -left-5 border-ment-color  bg-slate-300 backdrop-blur-md border-[1px] top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
         type="secondary"
       >
         <IoIosArrowBack className="text-black" />
       </Button>
       <Button
-        id="bannerNext"
-        className="bannerNext absolute right-1 border-ment-color bg-slate-300  border-[1px] backdrop-blur-md top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
+        id="bannerNext6"
+        className="bannerNext6 absolute right-5 border-ment-color bg-slate-300  border-[1px] backdrop-blur-md top-[60%] translate-y-[-50%] h-[40px] px-3 z-20 !rounded-[200px] cursor-pointer !text-xl"
         type="secondary"
       >
         <IoIosArrowForward className="text-white font-bold" />
       </Button>
     </div>
+    {isopen && <ALL_Card_popup isopen={isopen} setOpen={setOpen} id={7} />}
+
   </div>
   
   );
