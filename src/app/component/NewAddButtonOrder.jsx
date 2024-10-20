@@ -5,16 +5,11 @@ import { Button } from "@/components/ui/button";
 import { useStore_Data } from "../store/zustand_data";
 import ShopingButton from "../HeaderPage/shopingbutton";
 
-function AddButton({ product, increment }) {
-  // console.log("product in button filter data::", increment.id);
-  // State to track whether the button has been clicked
+function AddButtonOrder({ product, increment }) {
   const [count, setCount] = useState(0);
   const [Price_count, setPriceCount] = useState(0);
   const [isAdded, setIsAdded] = useState(false);
-  // const [DecrementNumber, setDecrementNumber] = useState(1);
-  // const [Decrementtrue, setDecrementtrue] = useState(false);
 
-  // console.log("DecrementNumber:::: button:",DecrementNumber)
   const {
     Count_Data,
     Single_Items_Prices,
@@ -27,6 +22,25 @@ function AddButton({ product, increment }) {
     setDecrementPriceSave,
   } = useStore_Data();
   const storeprice = [];
+
+  const tottalSavePriceIncrement = IncrementPriceSave.flat(Infinity);
+
+  const totalPriceIncrement = tottalSavePriceIncrement.reduce(
+    (a, b) => a + b.price,
+    0
+  );
+
+  const tottalSavePriceDecrement = DecrementPriceSave.flat(Infinity);
+
+  const tottalPriceDecrements = tottalSavePriceDecrement.reduce(
+    (a, b) => a + b.price,
+    0
+  );
+
+  console.log("calculatord total increment::", totalPriceIncrement);
+  console.log("calculatord totolal decrement::", tottalPriceDecrements);
+  console.log("calculatord::", totalPriceIncrement - tottalPriceDecrements);
+
   // console.log("Product list data from store:", Item_List);
   // console.log("store values::",Item_Price)
 
@@ -78,12 +92,7 @@ function AddButton({ product, increment }) {
   const handleDecrement = () => {
     if (count === 1) {
       setCount(0); // Set count to 0 when it reaches 1
-      // setPriceCount(0)
-      // Single_Items_Price s(Price_count)
-      // setDecrementtrue(true)
-      // setDecrementNumber(DecrementNumber)
-      // Count_Data(-1)
-      // setDecrementNumbers(1)
+
       DataTranfer(3);
       setIsAdded(false); // Reset to "ADD" when count reaches 0
       const item = product.filter((val) => val.id === increment);
@@ -91,11 +100,8 @@ function AddButton({ product, increment }) {
       // Item_List.find((val) => val.id === id);
     } else if (count > 1) {
       setCount(count - 1); // Decrease count if it's greater than 1
-      // setDecrementtrue(true)
-      // setDecrementNumbers(1)
       DataTranfer(4);
       const item = product.filter((val) => val.id === increment);
-      // console.log("Decrement valuer are here ::::", item);
       setDecrementPriceSave(item);
     }
   };
@@ -133,4 +139,4 @@ function AddButton({ product, increment }) {
   );
 }
 
-export default AddButton;
+export default AddButtonOrder;

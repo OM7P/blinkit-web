@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,9 +17,10 @@ export const metadata = {
   title: "blinkit",
   description: "blinkit",
   icons: {
-    icon: '/images/favicon5.png',  // Path to your favicon in the public folder
+    icon: "/images/favicon5.png", // Path to your favicon in the public folder
   },
 };
+
 
 export default function RootLayout({ children }) {
   return (
@@ -26,6 +28,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src={`https://www.paypal.com/sdk/js?client-id=${process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID}`}
+          strategy="beforeInteractive"
+        />
+
         {children}
       </body>
     </html>

@@ -6,7 +6,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Amul Taaza Toned Fresh Milk",
     image: "/images/21.avif",
-    price: "28",
+    price: 28,
     weight: "500 ml",
     parent_id:"Daily_base",
     id:1
@@ -14,7 +14,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Gokul Full Cream Fresh Milk",
     image: "/images/22.avif",
-    price: "38",
+    price: 38,
     weight: "500 ml",
     offercard: <OfferCard />,
     parent_id:"Daily_base",
@@ -23,14 +23,14 @@ export const Daily_Base_Data = [
   {
     Product_name: "Gokul Satvik Pasteurized Cow Fresh",
     image: "/images/23.avif",
-    price: "28",
+    price: 28,
     weight: "500 ml",parent_id:"Daily_base",
     id:3
   },
   {
     Product_name: "Amul Salted Butter",
     image: "/images/24.avif",
-    price: "60",
+    price: 60,
     weight: "10 gm",
     offercard: <OfferCard />,
     parent_id:"Daily_base",
@@ -39,7 +39,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Amul Masti Curd",
     image: "/images/25.avif",
-    price: "23",
+    price: 23,
     weight: "200 gm",
     parent_id:"Daily_base",
     id:5
@@ -47,7 +47,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Britannia Vitarich Sandwich White Bread",
     image: "/images/26.avif",
-    price: "65",
+    price: 65,
     weight: "500 gm",
     offercard: <OfferCard />,
     parent_id:"Daily_base",
@@ -56,7 +56,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Mother Dairy Classic Curd",
     image: "/images/27.avif",
-    price: "35",
+    price: 35,
     weight: "400 gm",
     parent_id:"Daily_base",
     id:7
@@ -64,7 +64,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Yojana Poultry Power White Eggs - 6 pcs",
     image: "/images/28.avif",
-    price: "54",
+    price: 54,
     weight: "6 pieces",
     offercard: <OfferCard />,
     parent_id:"Daily_base",
@@ -73,7 +73,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Amul Cheese Cubes",
     image: "/images/29.avif",
-    price: "131",
+    price: 131,
     weight: "200 gm",
     parent_id:"Daily_base",
     id:9
@@ -81,7 +81,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Modern Sandwich Bread",
     image: "/images/23.avif",
-    price: "50",
+    price: 50,
     weight: "400 gm",
     parent_id:"Daily_base",
     id:10
@@ -89,7 +89,7 @@ export const Daily_Base_Data = [
   {
     Product_name: "Amul Cheese Cubes",
     image: "/images/29.avif",
-    price: "131",
+    price: 131,
     weight: "200 gm",
     parent_id:"Daily_base",
     id:11

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { BiSolidDownArrow } from "react-icons/bi";
 import AccountCard from '../component/Account_Card';

@@ -20,6 +20,8 @@ import Location_page from "../current_location/Location_page";
 
 function Dashboard() {
   const [isLoader, setLoader] = useState(true);
+  // console.log('PayPal Client ID:', process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,15 +38,15 @@ function Dashboard() {
         {/* <Banner_first /> */}
         {/* <Banner_Second />
         <MultipleIteams /> */}
-        <Daily_base />
-        {/* <Rolling_Paper />
+         <Daily_base />
+        {/*<Rolling_Paper />
         <Sancks_Munchies />
         <Hookah />
         <Mouth_Fresh />
         <Cold_Drinks />
         <Candies_Gums />
-        <LinkCategories />
-        <Footer /> */}
+        <LinkCategories /> */}
+        {/* <Footer /> */}
       </div>
     );
   }

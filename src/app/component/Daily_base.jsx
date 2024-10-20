@@ -29,19 +29,7 @@ function Daily_base() {
     setOpen(true);
   };
 
-  // useEffect(() => {
-  //   if (Daily_Base_Data) {
-  //     // Log all prices of the products
-  //     Daily_Base_Data.forEach((product) => {
-  //       console.log(product.price);
-  //     });
 
-  //     // Call Items_Prices to update your Zustand store
-  //     Items_Prices(Daily_Base_Data);
-  //   }
-  // }, [Items_Prices]); // Removed Daily_Base_Data from the dependency array
-
-  // console.log(Daily_Base_Data.Product_name);
   return (
     <div className="relative w-[90%] mx-[100px] py-10">
       <div className="flex items-center">
@@ -64,8 +52,8 @@ function Daily_base() {
           prevEl: "#bannerPrev11",
         }}
         pagination={{ clickable: false }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         {Daily_Base_Data.map((product, index) => {
           const CardItem = Daily_Base_Data.filter((valie_Id)=> valie_Id.id === product.id)

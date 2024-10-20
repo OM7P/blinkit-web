@@ -14,6 +14,7 @@ function Location_page() {
   const [Datavalue, setDataValue] = useState("");
 
   const notify = () => toast.error("Please allow location access in your browser settings.");
+  
   useEffect(() => {
     GeolocationFun();
   }, []);
