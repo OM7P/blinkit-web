@@ -1,7 +1,13 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 function Logo() {
+  const router = useRouter()
+  const DirectToHomePage =()=>{
+    router.push('/')
+  }
+
   return (
     <div className="">
       <Image
@@ -9,7 +15,8 @@ function Logo() {
         width={150}
         alt="image"
         height={10}
-        className="p-2 w-[160px] h-[60px]  rounded-lg whitespace-nowrap  "
+        className="p-2 w-[160px] h-[60px]  rounded-lg whitespace-nowrap  cursor-pointer "
+        onClick={DirectToHomePage}
       />
 
       {/* <div className=" absolute bg-black w-[100px] h-full"></div> */}

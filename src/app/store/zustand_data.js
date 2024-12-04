@@ -15,6 +15,11 @@ export const useStore_Data = create(
       IncrementPriceSave: [],
       DecrementPriceSave: [],
       GetTotalPrice: 0,
+      GetLastProductData: [],
+      GetOtpNumber: [],
+      GetOTPNumber4Digit:[],
+      GetUserOtpNumber:0,
+      GetUserOtpNumberttyytytyt:0,
 
       setDecrementNumbers: (payload) =>
         set(() => ({
@@ -61,6 +66,18 @@ export const useStore_Data = create(
             }
           )
         ),
+        setGetOtpNumber: (payload) =>
+          set(() => ({GetOtpNumber: payload,})),
+        setGetUserOtpNumber: (payload) =>
+          set(() => (console.log("4 digit new :::",payload),{GetUserOtpNumber: payload,})),
+        setGetUserOtpNumberttyytytyt: (payload) =>
+          set(() => (console.log("4 ew :::",payload),{GetUserOtpNumberttyytytyt: payload,})),
+
+        setGetOTPNumber4Digit: (payload) =>
+        set((state) => (console.log("4 digit otp numvber add in varible:::",payload),{
+          GetOTPNumber4Digit: [...state.GetOTPNumber4Digit, payload],
+        })),
+
       setLogout: () =>
         set(() => ({
           Count_number: [],
@@ -72,7 +89,19 @@ export const useStore_Data = create(
           IncrementPriceSave: [],
           DecrementPriceSave: [],
           GetTotalPrice: 0,
+          GetOtpNumber:[],
+          GetOTPNumber4Digit:[],
         })),
+
+      setGetLastProductData: (payload) =>
+        set(
+          () => (
+            console.log("GetLastProductData:::::payload:::::", payload),
+            {
+              GetLastProductData: payload,
+            }
+          )
+        ),
     }),
 
     {

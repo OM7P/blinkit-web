@@ -1,6 +1,6 @@
 "use client";
 
-import { React, useState,useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import Header from "../HeaderPage/header";
 import Banner_first from "../banner_1/Banner_first";
 import Banner_Second from "../banner_2/banner_Second";
@@ -16,12 +16,12 @@ import LinkCategories from "../component/Limk_Categories";
 import Footer from "../component/Footer";
 import Loader from "../component/Loader";
 import Location_page from "../current_location/Location_page";
-
+// import { AccordionDemo } from "../paymentgatway/page";
+import Otp_number from "../component_otp/Otp_number";
 
 function Dashboard() {
   const [isLoader, setLoader] = useState(true);
   // console.log('PayPal Client ID:', process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID);
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,27 +29,29 @@ function Dashboard() {
     }, 2000);
   });
 
-  // if (isLoader) {
-  //   return <Loader />;
-  // } else {
-    return (
-      <div>
-        <Header />
-        {/* <Banner_first /> */}
-        {/* <Banner_Second />
-        <MultipleIteams /> */}
-         <Daily_base />
-        {/*<Rolling_Paper />
-        <Sancks_Munchies />
-        <Hookah />
-        <Mouth_Fresh />
-        <Cold_Drinks />
-        <Candies_Gums />
-        <LinkCategories /> */}
-        {/* <Footer /> */}
-      </div>
-    );
-  }
-// }
+  if (isLoader) {
+    return <Loader />;
+  } else {
+  return (
+    <div>
+      <Header />
+      <Banner_first />
+      <Banner_Second />
+      <MultipleIteams />
+      <Otp_number/>
+      <Daily_base />
+      <Rolling_Paper />
+      <Sancks_Munchies />
+      <Hookah />
+      <Mouth_Fresh />
+      <Cold_Drinks />
+      <Candies_Gums />
+      <LinkCategories />
+      <Footer /> 
+      {/* <AccordionDemo/> */}
+    </div>
+  );
+}
+}
 
 export default Dashboard;

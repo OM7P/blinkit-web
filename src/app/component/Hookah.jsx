@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { useState } from "react";
 import { CiStopwatch } from "react-icons/ci";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,11 +16,22 @@ import { FaRupeeSign } from "react-icons/fa";
 import OfferCard from "../offer_cards/OfferCard";
 import { Hookah_data } from "../json/Product_json";
 import ALL_Card_popup from "./All_Card_popup";
+import { Skeleton } from "@/components/ui/skeleton";
+import React, { useEffect, useState } from "react";
 function Hookah() {
   const [isopen, setOpen] = useState(false);
   const OpenFunction = () => {
     setOpen(true);
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  });
+
   return (
     <div className="relative w-[90%] mx-[100px] ">
       <div className="flex items-center">
@@ -42,44 +52,62 @@ function Hookah() {
           prevEl: "#bannerPrev3",
         }}
         pagination={{ clickable: false }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
-        {Hookah_data.map((product, index) => (
-          <SwiperSlide key={index}>
-            <div className=" relative bottom-[1px]   rounded-xl border-2 w-[180px] h-[260px]  ">
-              <Image
-                src={product.image}
-                width={130}
-                height={100}
-                alt={product.Product_name}
-                 className="mx-8 border-none"
-              />
-              {product.offercard || null}
+        {Hookah_data.map((product, index) => {
+          const CardItem = Hookah_data.filter(
+            (valie_Id) => valie_Id.id === product.id
+          );
+          return (
+            <SwiperSlide key={index}>
+              <div className=" relative bottom-[1px]   rounded-xl border-2 w-[180px] h-[260px]  ">
+                {isLoading ? (
+                  <>
+                    <div className="my-2">
+                      <Skeleton className="h-[120px] w-[155px] mx-3" />
+                      <Skeleton className="h-[30px] w-[130px] mx-3 mt-2" />
+                      <Skeleton className="h-[20px] w-[70px] mx-3 mt-2" />
+                      <Skeleton className="h-[20px] w-[100px] mx-3 mt-2" />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <Image
+                      src={product.image}
+                      width={130}
+                      height={100}
+                      alt={product.Product_name}
+                      className="mx-8 border-none"
+                    />
+                    {product.offercard || null}
 
-              <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
-                <CiStopwatch />
-                14min
-              </p>
-              <p className="mx-3 text-[15px]">
-                {product.Product_name.slice(0, 15)}....
-              </p>
-              <p className="text-[12px] text-slate-600 py-[10px] mx-3">
-                {product.weight}
-              </p>
-              <div className="flex justify-around items-center gap-8 text-[13px]">
-                <p className="flex justify-center items-center">
-                  <FaRupeeSign />
-                  {product.price || "N/A"}
-                </p>
+                    <p className="mx-5 flex justify-start items-center text-[10px] bg-slate-100 w-[42px] rounded-sm">
+                      <CiStopwatch />
+                      14min
+                    </p>
+                    <p className="mx-3 text-[15px]">
+                      {product.Product_name.slice(0, 15)}....
+                    </p>
+                    <p className="text-[12px] text-slate-600 py-[10px] mx-3">
+                      {product.weight}
+                    </p>
+                    <div className="flex justify-around items-center gap-8 text-[13px]">
+                      <p className="flex justify-center items-center">
+                        <FaRupeeSign />
+                        {product.price || "N/A"}
+                      </p>
 
-                {/* <Button className="border-green-600 bg-green-600 text-white">ADD</Button>
-                 */}
-                <AddButton />
+                      {/* <Button className="border-green-600 bg-green-600 text-white">ADD</Button>
+                       */}
+                       <AddButton product={CardItem} increment={product.id} />
+                    </div>
+                  </>
+                )}
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       <div className="md:block hidden">

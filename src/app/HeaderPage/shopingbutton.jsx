@@ -25,6 +25,7 @@ function ShopingButton() {
 
   const tottalSavePriceIncrement = IncrementPriceSave.flat(Infinity);
 
+  // console.log("calculatord total tottalSavePriceIncrement::", tottalSavePriceIncrement);
   const totalPriceIncrement = tottalSavePriceIncrement.reduce(
     (a, b) => a + b.price,
     0
@@ -40,6 +41,7 @@ function ShopingButton() {
   // console.log("calculatord total increment::", totalPriceIncrement);
   // console.log("calculatord totolal decrement::", tottalPriceDecrements);
   // console.log("calculatord::", totalPriceIncrement - tottalPriceDecrements);
+  const TotalValueOfProduct = totalPriceIncrement - tottalPriceDecrements
 
   const OpenFunction = () => {
     setOpen(true);
@@ -51,7 +53,7 @@ function ShopingButton() {
         <div className="gap-2 flex justify-around items-center">
           <FaShoppingCart className="w-[20px] h-[20px] " />
 
-          {Single_number > 0 ? (
+          {TotalValueOfProduct > 0 ? (
             <div
               className=" text-[15px] font-semibold text-start"
               onClick={OpenFunction}

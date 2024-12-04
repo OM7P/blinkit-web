@@ -1,4 +1,7 @@
 // components/Modal.js
+'use client'
+
+
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { useStore_Data } from "../store/zustand_data";

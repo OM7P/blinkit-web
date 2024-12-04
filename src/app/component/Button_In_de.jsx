@@ -6,7 +6,7 @@ import { useStore_Data } from "../store/zustand_data";
 import ShopingButton from "../HeaderPage/shopingbutton";
 
 function AddButton({ product, increment }) {
-  // console.log("product in button filter data::", increment.id);
+  // console.log("product in button filter data::", increment);
   // State to track whether the button has been clicked
   const [count, setCount] = useState(0);
   const [Price_count, setPriceCount] = useState(0);

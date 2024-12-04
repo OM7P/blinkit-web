@@ -1,3 +1,6 @@
+'use client'
+
+
 import React from "react";
 import Logo from "./logo";
 import MyAddress from "./myaddress";
@@ -8,7 +11,7 @@ import Location_page from "../current_location/Location_page";
 
 function Header() {
   return (
-    <div className=" h-[80px] flex items-center border-b-yellow-300 border-10 cursor-pointer  justify-between">
+    <div className="  h-[80px] flex items-center border-b-yellow-300 border-10 cursor-pointer  justify-between">
       <div className=" flex justify-center items-center gap-3">
         <Logo />
         <div className="w-[1px] bg-gray-200 h-[11vh] "></div>
@@ -21,7 +24,7 @@ function Header() {
       </div>
 
       <div className="flex items-center mx-6 gap-[15px]">
-        {/* <Location_page/> */}
+        <Location_page/>
         <MyAccount />
         <ShopingButton />
       </div>

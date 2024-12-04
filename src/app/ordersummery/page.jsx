@@ -1,22 +1,41 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../HeaderPage/header";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useStore_Data } from "../store/zustand_data";
 import { useRouter } from "next/navigation";
+import OrderHistory from "../orderhistory/page";
+import Loader from "../component/Loader";
 
 function FinalSummery() {
   const { GetTotalPrice } = useStore_Data();
   // const GetTotalPrice =9
   const router = useRouter();
+  const [isLoader, setLoader] = useState(true);
+
+  // const [isOpen,setIsopen]=useState(false)
 
   const CancellOrder=()=>{
     // console.log("canccell order function rendum")
     router.push('/cancellsummery')
   }
+  const ViewOrderDetails=()=>{
+    // console.log("canccell order function rendum")
+    router.push('/orderhistory')
+  }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 2000);
+  });
+
+
+  if (isLoader) {
+    return <Loader />;
+  } else {
   return (
     <div>
       <div>
@@ -41,7 +60,9 @@ function FinalSummery() {
             shakha Mulund Railway Station, Siddharth Nagar, Mulund West, Mumbai
           </p>
           <p className="">Total Amount ₹{GetTotalPrice === 0 ? "0" : GetTotalPrice}</p>
-          <Button className="bg-white my-2 text-green-800 border-2 hover:bg-white border-slate-200">
+          <Button className="bg-white my-2 text-green-800 border-2 hover:bg-white border-slate-200"
+          onClick={()=>ViewOrderDetails()}
+          >
             View Order details
           </Button>
           <p>OR</p>
@@ -65,8 +86,9 @@ function FinalSummery() {
         </div>
       </div>
       <div className="h-[500px]"></div>
+     
     </div>
   );
-}
+}}
 
 export default FinalSummery;
