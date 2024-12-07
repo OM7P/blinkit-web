@@ -21,17 +21,18 @@ function PayPalButton() {
     setIsTransactionComplete(true);
     // alert(`Transaction completed by ${payerName}`);
   };
-
   useEffect(() => {
     // Only render PayPal buttons if there's valid data for the amount
     if (!GetTotalPrice) return;
-
+  
+    const paypalContainer = paypalRef.current; // Capture ref value locally
+  
     const renderPayPalButtons = () => {
-      if (!paypalRef.current) {
+      if (!paypalContainer) {
         console.error('PayPal container element is not available');
         return;
       }
-
+  
       window.paypal.Buttons({
         createOrder: (data, actions) => {
           return actions.order.create({
@@ -53,40 +54,22 @@ function PayPalButton() {
           console.error('PayPal Checkout onError:', err);
           alert('There was an issue with the PayPal transaction. Please try again.');
         },
-      }).render(paypalRef.current);
+      }).render(paypalContainer);
     };
-
+  
     // Ensure PayPal script is available before rendering
     if (window.paypal) {
       renderPayPalButtons();
     } else {
       console.error('PayPal script not available');
     }
-
+  
     return () => {
-      if (paypalRef.current && paypalRef.current.innerHTML) {
-        paypalRef.current.innerHTML = ''; // Clean up PayPal button
+      if (paypalContainer && paypalContainer.innerHTML) {
+        paypalContainer.innerHTML = ''; // Clean up PayPal button
       }
     };
-  }, [GetTotalPrice]);
-
-  // Redirect after successful transaction
-  useEffect(() => {
-    if (isTransactionComplete) {
-    setTimeout(() => {
-      
-    }, 1000);
-      router.push('/ordersummery'); // Redirect to home page
-    }
-  }, [isTransactionComplete, router]);
+  }, [GetTotalPrice]); // Dependencies remain unchanged
 
   
-  return (
-    <div className=" w-[500px] mx-[30%] my-[10px]">
-      <ToastContainer />
-      <div  ref={paypalRef}></div>
-    </div>
-  );
 }
-
-export default PayPalButton;
