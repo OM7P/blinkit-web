@@ -26,9 +26,9 @@ function FinalSummery() {
       <div className="">
         <div className="flex flex-col justify-center items-center my-10">
           {GetTotalPrice === 0 ? (
-            <Image src={"/images/red x circel image.jpg"} width={120} height={100} />
+            <Image src={"/images/red x circel image.jpg"} alt="images" width={120} height={100} />
           ) : (
-            <Image src={"/images/successIcon.webp"} width={100} height={100} />
+            <Image src={"/images/successIcon.webp"} width={100} alt="images" height={100} />
           )}
           <p className="text-xl">
             {GetTotalPrice === 0 ? "CANCELLED" : "SUCCESS"}
@@ -50,7 +50,7 @@ function FinalSummery() {
           </Button>
         </div>
         <div className="flex flex-col justify-center items-center ">
-          <Image src={"/images/sucessfooter.webp"} width={1300} height={1500} />
+          <Image src={"/images/sucessfooter.webp"} width={1300} height={1500} alt="images" />
           <div className="-my-[240px] ml-[700px] flex flex-col items-center">
             <p className="text-[45px] font-thin">track your order</p>
 
@@ -58,8 +58,8 @@ function FinalSummery() {
               download ios or android app to track your order live
             </p>
             <div className="flex  gap-10">
-              <Image src={"/images/a1.webp"} width={130} height={50} />
-              <Image src={"/images/a2.webp"} width={130} height={50} />
+              <Image src={"/images/a1.webp"} alt="images" width={130} height={50} />
+              <Image src={"/images/a2.webp"} width={130} alt="images" height={50} />
             </div>
           </div>
         </div>
