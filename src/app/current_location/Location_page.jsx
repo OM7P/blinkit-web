@@ -17,7 +17,7 @@ function Location_page() {
   
   useEffect(() => {
     GeolocationFun();
-  }, []);
+  }, [GeolocationFun]);
 
   const GeolocationFun = async () => {
     navigator.geolocation.getCurrentPosition(
