@@ -36,7 +36,7 @@ function AddButton({ product, increment }) {
     Single_Data(count);
     // Count_Data(count); // Update the count in Zustand
     // setPriceCount(item)
-  }, [Count_Data, count]);
+  }, [Count_Data, count,Single_Data]);
 
   const DataTranfer = (data) => {
     // console.log("increment valuer are here ::::", increment, data);
