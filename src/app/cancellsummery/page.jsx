@@ -22,7 +22,7 @@ function FinalSummery() {
       setLoader(false);
 
     }, 2000);
-  });
+  },[]);
 
 
   const ContinueShopping = ()=>{

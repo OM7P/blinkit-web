@@ -27,7 +27,7 @@ function Dashboard() {
     setTimeout(() => {
       setLoader(false);
     }, 2000);
-  });
+  },[]);
 
   // if (isLoader) {
   //   return <Loader />;
