@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import React, { useEffect, useState } from 'react';
 import { CiSearch } from 'react-icons/ci';
 
-function SearchInput() {
+// function SearchInput() {
   const textSequence = [
     'Search milk',
     'Search orange',
@@ -17,25 +17,25 @@ function SearchInput() {
     'Search chicken',
     'Search cheese',
   ];
-
-  const [displayText, setDisplayText] = useState('Search milk');
-  const [inputText, setInputText] = useState(''); // Track user input
-  const [isFocused, setIsFocused] = useState(false); // Track if input is focused
-
-  useEffect(() => {
-    let index = 0;
-
-    const interval = setInterval(() => {
-      // Only change the animated text if input is not focused and empty
-      if (!isFocused && !inputText) {
-        index = (index + 1) % textSequence.length;
-        setDisplayText(textSequence[index]);
-      }
-    }, 4000); // Change text every 4 seconds
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(interval);
-  }, [isFocused, inputText,textSequence]);
+  
+  function SearchInput() {
+    const [displayText, setDisplayText] = useState('Search milk');
+    const [inputText, setInputText] = useState('');
+    const [isFocused, setIsFocused] = useState(false);
+  
+    useEffect(() => {
+      let index = 0;
+  
+      const interval = setInterval(() => {
+        if (!isFocused && !inputText) {
+          index = (index + 1) % textSequence.length;
+          setDisplayText(textSequence[index]);
+        }
+      }, 4000);
+  
+      return () => clearInterval(interval);
+    }, [isFocused, inputText]); // No need for textSequence as a dependency
+  
 
   const handleInputChange = (e) => {
     setInputText(e.target.value); // Update inputText state
