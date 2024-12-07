@@ -4,10 +4,11 @@ import MyAddress from "./myaddress";
 import SearchInput from "./searchInput";
 import MyAccount from "./myaccount";
 import ShopingButton from "./shopingbutton";
+import Location_page from "../current_location/Location_page";
 
 function Header() {
   return (
-    <div className="h-[80px] flex items-center border-b-yellow-300 border-10 cursor-pointer  justify-between px-4">
+    <div className=" h-[80px] flex items-center border-b-yellow-300 border-10 cursor-pointer  justify-between">
       <div className=" flex justify-center items-center gap-3">
         <Logo />
         <div className="w-[1px] bg-gray-200 h-[11vh] "></div>
@@ -19,12 +20,13 @@ function Header() {
         <SearchInput />
       </div>
 
-      <div className="flex items-center  left-[80%] gap-[20px]">
+      <div className="flex items-center mx-6 gap-[15px]">
+        {/* <Location_page/> */}
         <MyAccount />
         <ShopingButton />
       </div>
 
-      {/* <div className="absolute bg-gray-200 h-[1px] w-full top-[80px]"></div> */}
+      <div className="absolute bg-gray-200 h-[1px] w-full top-[80px]"></div>
     </div>
   );
 }
