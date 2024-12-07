@@ -35,7 +35,7 @@ function SearchInput() {
 
     // Cleanup interval on component unmount
     return () => clearInterval(interval);
-  }, [isFocused, inputText]);
+  }, [isFocused, inputText,textSequence]);
 
   const handleInputChange = (e) => {
     setInputText(e.target.value); // Update inputText state
