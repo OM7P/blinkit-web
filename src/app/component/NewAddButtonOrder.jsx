@@ -17,7 +17,7 @@ function AddButtonOrder({ product, increment }) {
     StorePriceValue,
     Item_Price,
     Item_List,
-    Single_Data,
+    setSingle_Data,
     setIncrementPriceSave,
     setDecrementPriceSave,
   } = useStore_Data();
@@ -47,10 +47,9 @@ function AddButtonOrder({ product, increment }) {
   // Update the count on mount
   useEffect(() => {
     // handleIncrement()
-    Single_Data(count);
-    // Count_Data(count); // Update the count in Zustand
-    // setPriceCount(item)
-  }, [Count_Data, count]);
+    setSingle_Data(count);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [count]);
 
   const DataTranfer = (data) => {
     // console.log("increment valuer are here ::::", increment, data);
