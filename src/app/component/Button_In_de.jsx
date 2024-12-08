@@ -1,74 +1,129 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Button } from '@/components/ui/button';
-import { useStore_Data } from '../store/zustand_data';
+"use click";
+
+import { React, useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { useStore_Data } from "../store/zustand_data";
+import ShopingButton from "../HeaderPage/shopingbutton";
 
 function AddButton({ product, increment }) {
-  // Zustand store functions
-  const { Single_Data, Count_Data } = useStore_Data();
-
-  // Local state for count and "added" status
+  // console.log("product in button filter data::", increment.id);
+  // State to track whether the button has been clicked
   const [count, setCount] = useState(0);
+  const [Price_count, setPriceCount] = useState(0);
   const [isAdded, setIsAdded] = useState(false);
+  // const [DecrementNumber, setDecrementNumber] = useState(1);
+  // const [Decrementtrue, setDecrementtrue] = useState(false);
 
-  // Memoized function to update Single_Data
-  const updateSingleData = useCallback(() => {
-    Single_Data(count); // Call Zustand function with the current count
-  }, [Single_Data, count]);
+  // console.log("DecrementNumber:::: button:",DecrementNumber)
+  const {
+    Count_Data,
+    Single_Items_Prices,
+    setDecrementNumbers,
+    StorePriceValue,
+    Item_Price,
+    Item_List,
+    Single_Data,
+    setIncrementPriceSave,
+    setDecrementPriceSave,
+  } = useStore_Data();
+  const storeprice = [];
+  // console.log("Product list data from store:", Item_List);
+  // console.log("store values::",Item_Price)
 
-  // Effect to call updateSingleData when dependencies change
+  // Update the count on mount
   useEffect(() => {
-    updateSingleData(); // Ensure Single_Data is updated whenever dependencies change
-  }, [updateSingleData]);
+    // handleIncrement()
+    Single_Data(count);
+    // Count_Data(count); // Update the count in Zustand
+    // setPriceCount(item)
+  }, [Count_Data, count]);
 
-  // Handle the "Add" button click
+  const DataTranfer = (data) => {
+    // console.log("increment valuer are here ::::", increment, data);
+  };
+
+  // Function to handle button click
   const handleAddClick = () => {
-    setCount(1); // Initialize count to 1
-    Count_Data(1); // Update the Zustand store with +1
-    setIsAdded(true); // Mark the item as added
+    const item = product.filter((val) => val.id === increment);
+    setPriceCount(item);
+    Single_Items_Prices(item);
+    StorePriceValue(item);
+    setIsAdded(true);
+    Count_Data(1);
+    DataTranfer(1);
+    setCount(1); // Initial count is set to 1 on first click
+    // const item = product.filter((val) => val.id === increment);
+    setIncrementPriceSave(item);
+    // console.log("ADD valuer are here ::::", item);
   };
 
-  // Handle incrementing the count
+  // console.log("store number and is value here:::",storeprice)
+
+  // Function to handle incrementing the count
   const handleIncrement = () => {
-    setCount((prev) => prev + 1); // Increment the count in local state
-    Count_Data(1); // Update the Zustand store with +1
+    Count_Data(1);
+    setCount(count + 1);
+    DataTranfer(2);
+    const item = product.filter((val) => val.id === increment);
+    // console.log("increment valuer are here ::::", item);
+    setIncrementPriceSave(item);
+    // console.log("item id::::::", item);
+    // setPriceCount(item);00
+    // Single_Items_Prices(item)
   };
 
-  // Handle decrementing the count
+  // console.log("price count error inifinte loopo:::",Price_count)
+
+  // Function to handle decrementing the count
   const handleDecrement = () => {
-    if (count > 1) {
-      setCount((prev) => prev - 1); // Decrement the count if greater than 1
-    } else {
-      setCount(0); // Reset count to 0
-      setIsAdded(false); // Mark the item as not added
+    if (count === 1) {
+      setCount(0); // Set count to 0 when it reaches 1
+      // setPriceCount(0)
+      // Single_Items_Price s(Price_count)
+      // setDecrementtrue(true)
+      // setDecrementNumber(DecrementNumber)
+      // Count_Data(-1)
+      // setDecrementNumbers(1)
+      DataTranfer(3);
+      setIsAdded(false); // Reset to "ADD" when count reaches 0
+      const item = product.filter((val) => val.id === increment);
+      setDecrementPriceSave(item);
+      // Item_List.find((val) => val.id === id);
+    } else if (count > 1) {
+      setCount(count - 1); // Decrease count if it's greater than 1
+      // setDecrementtrue(true)
+      // setDecrementNumbers(1)
+      DataTranfer(4);
+      const item = product.filter((val) => val.id === increment);
+      // console.log("Decrement valuer are here ::::", item);
+      setDecrementPriceSave(item);
     }
-    Count_Data(-1); // Update the Zustand store with -1
   };
 
   return (
     <div>
       {isAdded ? (
         <div className="flex items-center">
-          {/* Decrement button */}
-          <Button
-            className="w-[80px] bg-green-600 hover:bg-green-600 text-white"
-            onClick={handleDecrement}
-          >
-            -
-          </Button>
-          {/* Current count */}
-          <span className="mx-2">{count}</span>
-          {/* Increment button */}
-          <Button
-            className="hover:bg-green-600 bg-green-600 text-white"
-            onClick={handleIncrement}
-          >
-            +
+          <Button className="w-[80px] bg-green-600 hover:bg-green-600">
+            <Button
+              className=" bg-green-600 hover:bg-green-600	border-none text-white h-[10px] w-[10px]"
+              onClick={handleDecrement}
+            >
+              -
+            </Button>
+            <span className="">{count}</span>
+            {/* {Count_Data(1)} */}
+            <Button
+              className="hover:bg-green-600 bg-green-600 text-white h-[10px] w-[10px]"
+              onClick={handleIncrement}
+            >
+              +
+            </Button>
           </Button>
         </div>
       ) : (
-        // Add button
         <Button
-          className="border-green-700 rounded-lg border-[1px] hover:bg-green-50 text-green-800 bg-green-50 w-[80px]"
+          className=" border-green-700  rounded-lg border-[1px] hover:bg-green-50 text-green-800 bg-green-50 w-[80px]"
           onClick={handleAddClick}
         >
           ADD
