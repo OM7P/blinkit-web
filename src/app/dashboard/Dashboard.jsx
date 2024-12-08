@@ -35,18 +35,18 @@ function Dashboard() {
     return (
       <div>
         <Header />
-        {/* <Banner_first /> */}
-        {/* <Banner_Second />
-        <MultipleIteams /> */}
+        <Banner_first />
+        <Banner_Second />
+        <MultipleIteams />
          <Daily_base />
-        {/*<Rolling_Paper />
+        <Rolling_Paper />
         <Sancks_Munchies />
         <Hookah />
         <Mouth_Fresh />
         <Cold_Drinks />
         <Candies_Gums />
-        <LinkCategories /> */}
-        {/* <Footer /> */}
+        <LinkCategories />
+        <Footer />
       </div>
     );
   }
