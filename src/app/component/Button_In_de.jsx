@@ -22,7 +22,7 @@ function AddButton({ product, increment }) {
     StorePriceValue,
     Item_Price,
     Item_List,
-    Single_Data,
+    setSingle_Data,
     setIncrementPriceSave,
     setDecrementPriceSave,
   } = useStore_Data();
@@ -33,7 +33,7 @@ function AddButton({ product, increment }) {
   // Update the count on mount
   useEffect(() => {
     // handleIncrement()
-    Single_Data(count);
+    setSingle_Data(count);
     // Count_Data(count); // Update the count in Zustand
     // setPriceCount(item)
   }, [Count_Data, count]);
