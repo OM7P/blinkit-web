@@ -31,10 +31,10 @@ function AddButton({ product, increment }) {
   // console.log("store values::",Item_Price)
 
   // Update the count on mount
-  useEffect(() => {
-    setSingle_Data(count);
-  }, [setSingle_Data, count]);
-  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  setSingle_Data(count);
+}, [count]);
 
   const DataTranfer = (data) => {
     // console.log("increment valuer are here ::::", increment, data);
