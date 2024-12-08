@@ -31,9 +31,9 @@ function AddButton({ product, increment }) {
   // console.log("store values::",Item_Price)
 
   // Update the count on mount
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-useEffect(() => {
-  setSingle_Data(count);
+  useEffect(() => {
+    setSingle_Data(count);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [count]);
 
   const DataTranfer = (data) => {
