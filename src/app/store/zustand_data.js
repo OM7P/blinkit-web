@@ -28,7 +28,7 @@ export const useStore_Data = create(
         }),
 
       // Function to set count data
-      Single_Data: useCallback((Count) => set(() => ({ Single_number: Count })), []),
+      setSingle_Data: (payload) => set(() => ({ Single_number: payload })),
       Count_Data: (payload) =>
         set((state) => ({ Count_number: [...state.Count_number, payload] })),
 
