@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function PayPalButton() {
+export default function PayPalButton() {
   const { GetTotalPrice } = useStore_Data();
   
   const paypalRef = useRef(); // Reference to PayPal button container
