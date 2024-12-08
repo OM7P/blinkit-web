@@ -12,36 +12,36 @@ function AddButton({ product, increment }) {
 
   // Memoized function to update Single_Data
   const updateSingleData = useCallback(() => {
-    Single_Data(count);
+    Single_Data(count); // Call Zustand function with the current count
   }, [Single_Data, count]);
 
   // Effect to call updateSingleData when dependencies change
   useEffect(() => {
-    updateSingleData();
+    updateSingleData(); // Ensure Single_Data is updated whenever dependencies change
   }, [updateSingleData]);
 
-  // Handle adding the product
+  // Handle the "Add" button click
   const handleAddClick = () => {
     setCount(1); // Initialize count to 1
-    Count_Data(1); // Update global state
-    setIsAdded(true); // Mark as added
+    Count_Data(1); // Update the Zustand store with +1
+    setIsAdded(true); // Mark the item as added
   };
 
   // Handle incrementing the count
   const handleIncrement = () => {
-    setCount((prev) => prev + 1);
-    Count_Data(1); // Update global state
+    setCount((prev) => prev + 1); // Increment the count in local state
+    Count_Data(1); // Update the Zustand store with +1
   };
 
   // Handle decrementing the count
   const handleDecrement = () => {
     if (count > 1) {
-      setCount((prev) => prev - 1);
+      setCount((prev) => prev - 1); // Decrement the count if greater than 1
     } else {
-      setCount(0);
-      setIsAdded(false); // Reset added status
+      setCount(0); // Reset count to 0
+      setIsAdded(false); // Mark the item as not added
     }
-    Count_Data(-1); // Update global state
+    Count_Data(-1); // Update the Zustand store with -1
   };
 
   return (
