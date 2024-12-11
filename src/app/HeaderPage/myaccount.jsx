@@ -24,7 +24,7 @@ function MyAccount() {
     GetOTPNumber4Digit,
   } = useStore_Data();
   const UserOtpNumber = GetOTPNumber4Digit[3]
-    ? "-======"
+    ? ""
     : Number(GetOTPNumber4Digit[3]);
 
   // console.log(GetOtpNumber)
