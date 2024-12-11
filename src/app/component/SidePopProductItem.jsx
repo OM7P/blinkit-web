@@ -26,7 +26,7 @@ import { CiCircleInfo } from "react-icons/ci";
 import PayPalButton from "../paypalpage/page";
 import { useRouter } from "next/navigation";
 import RadioButtonComponent from "./RadioButton";
-import AboutPage from "@/app/about/page";
+// import AboutPage from "@/app/about/page";
 
 export default function SidePopProducItem({ isopen, setOpen }) {
   const [Changevalue, setChangevalue] = useState("");
